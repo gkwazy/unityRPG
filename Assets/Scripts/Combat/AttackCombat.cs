@@ -5,14 +5,14 @@ using RPG.Core;
 
 namespace RPG.Combat
 {
-    public class PlayerAttack : MonoBehaviour, IAction {
+    public class AttackCombat : MonoBehaviour, IAction {
 
         [SerializeField] float weaponRange = 2f; 
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 5f;       
         
         Health target;
-        float timeSinceLastAttack = 0;
+        float timeSinceLastAttack = Mathf.Infinity;
 
         private void Update() {
 
@@ -59,8 +59,9 @@ namespace RPG.Combat
             return (Vector3.Distance(transform.position, target.transform.position) < weaponRange);
         }
 
-        public bool CanAttack(AttackTarget attackTarget)
+        public bool CanAttack(GameObject attackTarget)
         {
+            print(attackTarget);
             if (attackTarget == null)
             {
                 return false;
@@ -69,7 +70,7 @@ namespace RPG.Combat
             return(targetToTest != null && !targetToTest.IsDead());
         }
 
-        public void Attack(AttackTarget combatTarget)
+        public void Attack(GameObject combatTarget)
         {
             GetComponent<ActionSchedular>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
@@ -91,6 +92,7 @@ namespace RPG.Combat
         //Add animation hit
         void Hit()
         {
+            print("HitCalled");
             if (target == null)
             {
                 return;

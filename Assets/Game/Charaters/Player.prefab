@@ -21,7 +21,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3895337993677124663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e38fdeed35a0bb469bd00b8841f26fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b8487fe44d9dbd4d9a1ff3183a327bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponRange: 2
