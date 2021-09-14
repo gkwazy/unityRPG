@@ -15,11 +15,11 @@ C:/Users/gkwaz/unityStuff/unityRPG/unityRPG
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53617
+57381
 Successfully changed project path to: C:/Users/gkwaz/unityStuff/unityRPG/unityRPG
 C:/Users/gkwaz/unityStuff/unityRPG/unityRPG
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 29.96 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 29.50 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -35,919 +35,194 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56612
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002671 seconds.
+Registered in 0.002862 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 35.45 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 30.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.192 seconds
+- Completed reload, in  1.089 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000927 seconds.
+Registered in 0.000778 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 40.01 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 29.01 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.064 seconds
+- Completed reload, in  0.902 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1486 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 148.4 MB.
-System memory in use after: 148.3 MB.
+System memory in use before: 148.7 MB.
+System memory in use after: 148.6 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 1956.
-Total: 1.557100 ms (FindLiveObjects: 0.129900 ms CreateObjectMapping: 0.037700 ms MarkObjects: 1.212900 ms  DeleteObjects: 0.175400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/New Terrain.asset
-  artifactKey: Guid(a45d4ed91af0199428f6a37c63bf8421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Terrain.asset using Guid(a45d4ed91af0199428f6a37c63bf8421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de21bf0169b13c0d55fc142276935cba') in 0.027125 seconds
-  Import took 0.029379 seconds .
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1955.
+Total: 1.552300 ms (FindLiveObjects: 0.118900 ms CreateObjectMapping: 0.035900 ms MarkObjects: 1.222000 ms  DeleteObjects: 0.175000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 69.960664 seconds.
-  path: Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain01_D.tga
-  artifactKey: Guid(d4398d92045a77c4a9f0fdf39d6f211c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain01_D.tga using Guid(d4398d92045a77c4a9f0fdf39d6f211c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d719180e1fe30cede77d751198feb64') in 0.043424 seconds
-  Import took 0.045988 seconds .
+  path: Assets/Game/Charaters/enemy.prefab
+  artifactKey: Guid(a5cec0e990bacb444adfc035e3cf3e4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Charaters/enemy.prefab using Guid(a5cec0e990bacb444adfc035e3cf3e4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f65116e2b8763fd977e046a11b304db') in 0.184178 seconds
+  Import took 0.187519 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.656292 seconds.
-  path: Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain04_D.tga
-  artifactKey: Guid(f8f4c748a3bd61d4a860b2046960d9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain04_D.tga using Guid(f8f4c748a3bd61d4a860b2046960d9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e1f759cae522475bfadd0de6921188c') in 0.009009 seconds
-  Import took 0.011520 seconds .
+  Time since last request: 0.000333 seconds.
+  path: Assets/Game/Charaters/Player.prefab
+  artifactKey: Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Charaters/Player.prefab using Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d2b1a480a9e12e3112f003045c2350d') in 0.055486 seconds
+  Import took 0.059862 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000743 seconds.
-  path: Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain04_D.tga
-  artifactKey: Guid(f8f4c748a3bd61d4a860b2046960d9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain04_D.tga using Guid(f8f4c748a3bd61d4a860b2046960d9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e1f759cae522475bfadd0de6921188c') in 0.007916 seconds
-  Import took 0.010032 seconds .
+  Time since last request: 2.988108 seconds.
+  path: Assets/Game/Charaters/enemy.prefab
+  artifactKey: Guid(a5cec0e990bacb444adfc035e3cf3e4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Charaters/enemy.prefab using Guid(a5cec0e990bacb444adfc035e3cf3e4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f65116e2b8763fd977e046a11b304db') in 0.072674 seconds
+  Import took 0.077169 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.421018 seconds.
-  path: Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain07_D.tga
-  artifactKey: Guid(167779c20878bdc43a7399996a940344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain07_D.tga using Guid(167779c20878bdc43a7399996a940344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '440db1470c163c234bb1d45786b3f7a6') in 0.008276 seconds
-  Import took 0.010823 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002977 seconds.
-  path: Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain07_D.tga
-  artifactKey: Guid(167779c20878bdc43a7399996a940344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Fantasy_Kingdom_Pack_Lite/Textures/Terrain07_D.tga using Guid(167779c20878bdc43a7399996a940344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '440db1470c163c234bb1d45786b3f7a6') in 0.006134 seconds
-  Import took 0.008400 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.563689 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Textures/PT_Ground_Generic_03.png
-  artifactKey: Guid(e0b09c625cee17a48b22b2cf949cd320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Textures/PT_Ground_Generic_03.png using Guid(e0b09c625cee17a48b22b2cf949cd320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05d8c5ea4a64619e31baad0c5c843d89') in 0.053532 seconds
-  Import took 0.055850 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.036775 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Textures/PT_Ground_Grass_Green_01.png
-  artifactKey: Guid(8c75ba30e5f76df4fb30725e4c9bf38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Textures/PT_Ground_Grass_Green_01.png using Guid(8c75ba30e5f76df4fb30725e4c9bf38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f844e880f1acec0af931e9140a2d8722') in 0.009169 seconds
-  Import took 0.011549 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001909 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Textures/PT_Ground_Grass_Green_01.png
-  artifactKey: Guid(8c75ba30e5f76df4fb30725e4c9bf38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Textures/PT_Ground_Grass_Green_01.png using Guid(8c75ba30e5f76df4fb30725e4c9bf38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f844e880f1acec0af931e9140a2d8722') in 0.009101 seconds
-  Import took 0.012068 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 187.072401 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Meshes/Trees/PT_Pine_Tree_03_green_cut.fbx
-  artifactKey: Guid(2a5e649cde00dd847885c694eb77f1fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Environments/Sources/Meshes/Trees/PT_Pine_Tree_03_green_cut.fbx using Guid(2a5e649cde00dd847885c694eb77f1fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b11d7a95d19b413844439111fc9accb') in 0.103919 seconds
-  Import took 0.106647 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.647722 seconds.
-  path: Assets/Game/Core/Camera.prefab
-  artifactKey: Guid(7fc476528231b694f8a785a97006f9be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Core/Camera.prefab using Guid(7fc476528231b694f8a785a97006f9be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0479a5854a441328a807915704098f2f') in 0.011886 seconds
-  Import took 0.014178 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000356 seconds.
-  path: Assets/Game/Core/FollowCamera.prefab
-  artifactKey: Guid(619435aa9715a1e4f8a7c0d58860866d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Core/FollowCamera.prefab using Guid(619435aa9715a1e4f8a7c0d58860866d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f815b1f280bff11edf8fc04729ca457c') in 0.011078 seconds
-  Import took 0.013198 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.919213 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/InputManager.preset
-  artifactKey: Guid(ad5d3a67d1b9b684fb80197bc615f11c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/InputManager.preset using Guid(ad5d3a67d1b9b684fb80197bc615f11c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e266ad36c707c17b4e7275daf8775039') in 0.011019 seconds
-  Import took 0.013171 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000374 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/PhysicsManager.preset
-  artifactKey: Guid(fd5270372f58fda4ebdd84100afdf254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/PhysicsManager.preset using Guid(fd5270372f58fda4ebdd84100afdf254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93bc357e60f1af8e8f2f31ae7b7c604b') in 0.004108 seconds
-  Import took 0.005997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.763889 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_01.prefab
-  artifactKey: Guid(2d6aaf9ece74c8e4a9fe0dc776b4334c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_01.prefab using Guid(2d6aaf9ece74c8e4a9fe0dc776b4334c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e379f61ecbc80f59667aae399cabca6a') in 0.010830 seconds
-  Import took 0.013024 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000439 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_05.prefab
-  artifactKey: Guid(24ea7397f418a8140982da151fee5829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_05.prefab using Guid(24ea7397f418a8140982da151fee5829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bec29f79fc69dcb62a370062cf882535') in 0.013152 seconds
-  Import took 0.016737 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000517 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Gate_01.prefab
-  artifactKey: Guid(5950102fd8f330c498c62f0e9e22bc1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Gate_01.prefab using Guid(5950102fd8f330c498c62f0e9e22bc1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80dbd9f36d4a1ae9ce9de14478e0e652') in 0.026202 seconds
-  Import took 0.029596 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000550 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_03.prefab
-  artifactKey: Guid(4bc0b8b152bdcf441a118343c02d5d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_03.prefab using Guid(4bc0b8b152bdcf441a118343c02d5d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '734ff81bca9115935ab81953936d459b') in 0.032323 seconds
-  Import took 0.035353 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000402 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Wooden_Bridge_02.prefab
-  artifactKey: Guid(29c774dacdcc73240b0c71228fdc6f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Wooden_Bridge_02.prefab using Guid(29c774dacdcc73240b0c71228fdc6f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95c00acd0a60a41982acd6b0a2957dd1') in 0.029667 seconds
-  Import took 0.032815 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_02.prefab
-  artifactKey: Guid(0f3413d69b4e3a048869018aed66e3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_02.prefab using Guid(0f3413d69b4e3a048869018aed66e3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad6879c35bc1ab5049d6e5e756f09d62') in 0.028055 seconds
-  Import took 0.030810 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000398 seconds.
-  path: Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_04.prefab
-  artifactKey: Guid(652f7014d6c823644ad1c083dab25274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/Polytope Studio/Lowpoly Medieval Village/Prefabs/PT_Medieval_Village_Fence_04.prefab using Guid(652f7014d6c823644ad1c083dab25274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39275929295bd1f0fe30641232901f8f') in 0.025042 seconds
-  Import took 0.028043 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001170 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.994 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.6 MB.
-System memory in use after: 146.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1971.
-Total: 1.941600 ms (FindLiveObjects: 0.162300 ms CreateObjectMapping: 0.069200 ms MarkObjects: 1.546700 ms  DeleteObjects: 0.162200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000781 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.831 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.6 MB.
-System memory in use after: 146.6 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1974.
-Total: 1.655100 ms (FindLiveObjects: 0.118600 ms CreateObjectMapping: 0.032200 ms MarkObjects: 1.351600 ms  DeleteObjects: 0.151900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 418.199865 seconds.
-  path: Assets/Scenes/SandBox/New Terrain.asset
-  artifactKey: Guid(34203f29db43b0f4db6e144204fa812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/New Terrain.asset using Guid(34203f29db43b0f4db6e144204fa812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3465b0d8771f71fb9feb27e8f0f06981') in 0.042895 seconds
-  Import took 0.045046 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Scenes/SandBox/NewLayer 4.terrainlayer
-  artifactKey: Guid(305900cdd9aba0c4284fdf23c45225a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/NewLayer 4.terrainlayer using Guid(305900cdd9aba0c4284fdf23c45225a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa458d8204e87ea7df95a8fc3dfe2239') in 0.028688 seconds
-  Import took 0.030698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/Scenes/SandBox/NavMesh.asset
-  artifactKey: Guid(88e5332bc00c75244b300f6bed10f09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/NavMesh.asset using Guid(88e5332bc00c75244b300f6bed10f09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fa077e5329fff04f5b27611ddca4559') in 0.003587 seconds
-  Import took 0.005460 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000336 seconds.
-  path: Assets/Scenes/SandBox/NewLayer 2.terrainlayer
-  artifactKey: Guid(cc6c0227304aaf44da1914fe055e6856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/NewLayer 2.terrainlayer using Guid(cc6c0227304aaf44da1914fe055e6856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '305f17d8adb34ba975b9ba1069b83d68') in 0.009673 seconds
-  Import took 0.011892 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Scenes/SandBox/NewLayer 3.terrainlayer
-  artifactKey: Guid(1b22b2466cd24b14eb74af78040eb095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/NewLayer 3.terrainlayer using Guid(1b22b2466cd24b14eb74af78040eb095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32c45b6f657f0803e623e5d657df0cf') in 0.014850 seconds
-  Import took 0.016949 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000338 seconds.
-  path: Assets/Scenes/SandBox/New Terrain 1.asset
-  artifactKey: Guid(531662012faf7da4c86a171e516e2120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/New Terrain 1.asset using Guid(531662012faf7da4c86a171e516e2120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833890a248a7ebd02dd23fef318f1735') in 0.017606 seconds
-  Import took 0.020140 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000291 seconds.
-  path: Assets/Scenes/SandBox/NewLayer 1.terrainlayer
-  artifactKey: Guid(308344b6662afcd4ab5fe29e54bc7ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/NewLayer 1.terrainlayer using Guid(308344b6662afcd4ab5fe29e54bc7ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b33626d9168864a304db56ea188950c0') in 0.008519 seconds
-  Import took 0.010970 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000328 seconds.
-  path: Assets/Scenes/SandBox/NewLayer.terrainlayer
-  artifactKey: Guid(77eee9fcb4f91804592a77105a8eb343) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/NewLayer.terrainlayer using Guid(77eee9fcb4f91804592a77105a8eb343) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec86da458d19ee12adf38d87b396af03') in 0.009183 seconds
-  Import took 0.011327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.742569 seconds.
-  path: Assets/Scenes/SandBox/SandBox/NavMesh.asset
-  artifactKey: Guid(737cdf77d5e0c43479187327b336687f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/SandBox/NavMesh.asset using Guid(737cdf77d5e0c43479187327b336687f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71e09ca49e575e53efe63b5797583f1a') in 0.003578 seconds
-  Import took 0.005900 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.039179 seconds.
+  Time since last request: 40.846613 seconds.
   path: Assets/Scenes/SandBox/SandBox2/NavMesh.asset
   artifactKey: Guid(8307568213a5ce64f8f7551f874ea2da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/SandBox2/NavMesh.asset using Guid(8307568213a5ce64f8f7551f874ea2da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3588d6ad644a1b1758ae8359a800fca') in 0.003509 seconds
-  Import took 0.005618 seconds .
+Start importing Assets/Scenes/SandBox/SandBox2/NavMesh.asset using Guid(8307568213a5ce64f8f7551f874ea2da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08bf93c1fcdcb665f3c8c31a88d308ca') in 0.006405 seconds
+  Import took 0.009211 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.885372 seconds.
-  path: Assets/Game/Charaters/Charater.prefab
-  artifactKey: Guid(461f8afbec01c604c93ee959698ec198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Charater.prefab using Guid(461f8afbec01c604c93ee959698ec198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32ebe3e9d8caa84af9fcabbdf5170e7') in 0.010687 seconds
-  Import took 0.013210 seconds .
+  Time since last request: 75.696442 seconds.
+  path: Assets/Scenes/SandBox/SandBox/NavMesh.asset
+  artifactKey: Guid(737cdf77d5e0c43479187327b336687f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SandBox/SandBox/NavMesh.asset using Guid(737cdf77d5e0c43479187327b336687f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73dcefda72d6b8132e811bfb9a0f7d33') in 0.003638 seconds
+  Import took 0.006013 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000334 seconds.
-  path: Assets/Game/Charaters/Skeleton.overrideController
-  artifactKey: Guid(beb973d82d9f0444085af2438c1f1b48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Skeleton.overrideController using Guid(beb973d82d9f0444085af2438c1f1b48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7f3fb6e320af1e34d09f4b9e62bc8e') in 0.037705 seconds
-  Import took 0.040788 seconds .
+  Time since last request: 0.950252 seconds.
+  path: Assets/Scenes/SandBox/New Terrain 1.asset
+  artifactKey: Guid(531662012faf7da4c86a171e516e2120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SandBox/New Terrain 1.asset using Guid(531662012faf7da4c86a171e516e2120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833890a248a7ebd02dd23fef318f1735') in 0.026714 seconds
+  Import took 0.029290 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000284 seconds.
-  path: Assets/Game/Charaters/PatrolPath.prefab
-  artifactKey: Guid(a6fc278f0af5d824f969ed1c0d4d477a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/PatrolPath.prefab using Guid(a6fc278f0af5d824f969ed1c0d4d477a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af061d620ed1461b448695070a8c1f06') in 0.004487 seconds
-  Import took 0.006942 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000325 seconds.
-  path: Assets/Game/Charaters/Enemy.prefab
-  artifactKey: Guid(a5cec0e990bacb444adfc035e3cf3e4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Enemy.prefab using Guid(a5cec0e990bacb444adfc035e3cf3e4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09e086bc59a4fcf40bfbe438ffe0f27c') in 0.127322 seconds
-  Import took 0.131565 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000346 seconds.
-  path: Assets/Game/Charaters/Player.prefab
-  artifactKey: Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Player.prefab using Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05143ed2f21d2c21f9998711af3eb177') in 0.061426 seconds
-  Import took 0.066360 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.226300 seconds.
+  Time since last request: 1.262798 seconds.
   path: Assets/Scenes/SandBox/SandBox.unity
   artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/SandBox.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1916666aaeb27720c3d839173be99181') in 0.004429 seconds
-  Import took 0.007242 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001119 seconds.
-  path: Assets/Scenes/SandBox/SandBox.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SandBox/SandBox.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1916666aaeb27720c3d839173be99181') in 0.003338 seconds
-  Import took 0.006091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 43.374708 seconds.
-  path: Assets/Game/Enviroment/PT_Fruit_Tree_01_apples (11).prefab
-  artifactKey: Guid(91e340e6bcdcbb349a771603e6e31a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Enviroment/PT_Fruit_Tree_01_apples (11).prefab using Guid(91e340e6bcdcbb349a771603e6e31a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9519d6f1adab5e45edc6dc17fecedd5f') in 0.021497 seconds
-  Import took 0.023892 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.011580 seconds.
-  path: Assets/Game/Cinematices/IntroSequenceTimeline.playable
-  artifactKey: Guid(89b8ef702506a2d4dab57f0625c2d27e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Cinematices/IntroSequenceTimeline.playable using Guid(89b8ef702506a2d4dab57f0625c2d27e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba61b27bb0cd8ae06aea1fe30cb6a96d') in 0.015019 seconds
-  Import took 0.017952 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.846465 seconds.
-  path: Assets/Game/Charaters/Charater.controller
-  artifactKey: Guid(d864c2d8a036d7246b870def79c91e50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Charater.controller using Guid(d864c2d8a036d7246b870def79c91e50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1421e1944bcc0c8fafa779144710e352') in 0.022894 seconds
-  Import took 0.026322 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.234108 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/StandingIdle_noWeapon.fbx
-  artifactKey: Guid(a47e9a94fb76afb4ea9b8c301cd7bca9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/StandingIdle_noWeapon.fbx using Guid(a47e9a94fb76afb4ea9b8c301cd7bca9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a41c5d4793cf43989666b8952b4a9df8') in 0.115490 seconds
-  Import took 0.118337 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.778274 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalWalk_noWeapon.fbx
-  artifactKey: Guid(3502e15a7de777f46bfb7546a6f25f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalWalk_noWeapon.fbx using Guid(3502e15a7de777f46bfb7546a6f25f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6693477e6df692df1000a67ebd304976') in 0.049226 seconds
-  Import took 0.051806 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.598658 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalSprint_noWeapon.fbx
-  artifactKey: Guid(52948d592632ef940955a84f1816f035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalSprint_noWeapon.fbx using Guid(52948d592632ef940955a84f1816f035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d58e2169db26325a70ab411dba2a0e2') in 0.055467 seconds
-  Import took 0.057979 seconds .
+Start importing Assets/Scenes/SandBox/SandBox.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77a276cab952647c6a4a1aec93347968') in 0.004045 seconds
+  Import took 0.006241 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001195 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.940 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.6 MB.
-System memory in use after: 160.5 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1981.
-Total: 1.698100 ms (FindLiveObjects: 0.154000 ms CreateObjectMapping: 0.041400 ms MarkObjects: 1.338700 ms  DeleteObjects: 0.163000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.075425 seconds.
-  path: Assets/Game/Charaters/Player.prefab
-  artifactKey: Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Player.prefab using Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4005413947d7e9605554d362a0563e17') in 0.095494 seconds
-  Import took 0.100023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.034919 seconds.
-  path: Assets/Game/Charaters/Player.prefab
-  artifactKey: Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Player.prefab using Guid(b3c7f275ddd16f449a74ff7a48274377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3951c29e3a6a441f66246193eeac71f9') in 0.055378 seconds
-  Import took 0.060043 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000761 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.840 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.6 MB.
-System memory in use after: 160.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1985.
-Total: 1.708100 ms (FindLiveObjects: 0.147600 ms CreateObjectMapping: 0.037900 ms MarkObjects: 1.364500 ms  DeleteObjects: 0.157200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000816 seconds.
+Registered in 0.000785 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.6 MB.
-System memory in use after: 160.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1988.
-Total: 1.838500 ms (FindLiveObjects: 0.140700 ms CreateObjectMapping: 0.033600 ms MarkObjects: 1.501800 ms  DeleteObjects: 0.161700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000790 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.802 seconds
+- Completed reload, in  0.838 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.6 MB.
-System memory in use after: 160.5 MB.
+Unloading 1429 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.5 MB.
+System memory in use after: 160.4 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1991.
-Total: 1.749700 ms (FindLiveObjects: 0.122600 ms CreateObjectMapping: 0.035500 ms MarkObjects: 1.426300 ms  DeleteObjects: 0.164300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 121.194052 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalk_noWeapon.fbx
-  artifactKey: Guid(50feca8597c87134085fcea20999f76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalk_noWeapon.fbx using Guid(50feca8597c87134085fcea20999f76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcc13ce63a3818b1e55e336d652c1bcb') in 0.132931 seconds
-  Import took 0.135988 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1967.
+Total: 1.667400 ms (FindLiveObjects: 0.132800 ms CreateObjectMapping: 0.032200 ms MarkObjects: 1.349900 ms  DeleteObjects: 0.152000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000302 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/SwimIdle_noWeapon.fbx
-  artifactKey: Guid(a822341f7871cca4687c24292e438842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/SwimIdle_noWeapon.fbx using Guid(a822341f7871cca4687c24292e438842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b7a8bd2b23a288270506b1f5c3c39a0') in 0.072352 seconds
-  Import took 0.074833 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000284 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Sleep_noWeapon.fbx
-  artifactKey: Guid(f011231e2a9f36e4c964e6f6aeb900f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Sleep_noWeapon.fbx using Guid(f011231e2a9f36e4c964e6f6aeb900f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b27efacca3c81d74ed448188a9369f1') in 0.050538 seconds
-  Import took 0.053187 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalkRight_noWeapon.fbx
-  artifactKey: Guid(b77b9fbaad73063468b190f9856c1fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalkRight_noWeapon.fbx using Guid(b77b9fbaad73063468b190f9856c1fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18dcd0e18b11f2129a5a1928f01214f1') in 0.051976 seconds
-  Import took 0.054720 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/ClimbStart_noWeapon.fbx
-  artifactKey: Guid(5d762f203d052a448b5ab5dec61d0b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/ClimbStart_noWeapon.fbx using Guid(5d762f203d052a448b5ab5dec61d0b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ec998b59df644abf2ed2a0388306956') in 0.049932 seconds
-  Import took 0.052573 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/JumpAir_noWeapon.fbx
-  artifactKey: Guid(33718109be105504fbd461fcfbccacce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/JumpAir_noWeapon.fbx using Guid(33718109be105504fbd461fcfbccacce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea32499adb2bad036728168fa90642af') in 0.055944 seconds
-  Import took 0.058205 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashForward_noWeapon.fbx
-  artifactKey: Guid(cf07dfc531a163e49bc83870bd083533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashForward_noWeapon.fbx using Guid(cf07dfc531a163e49bc83870bd083533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cba33dda08baecac41f53fd6676ccda') in 0.052752 seconds
-  Import took 0.055355 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/ClimbUp_noWeapon.fbx
-  artifactKey: Guid(48fd98e0c1f895b4ab6ba8d06dae2771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/ClimbUp_noWeapon.fbx using Guid(48fd98e0c1f895b4ab6ba8d06dae2771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e37a8ca6a6a3b7d1f860d6759c3cb4e') in 0.044718 seconds
-  Import took 0.047023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Victory_noWeapon.fbx
-  artifactKey: Guid(a54df371f46dc0c4d8f3f3bb91e36154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Victory_noWeapon.fbx using Guid(a54df371f46dc0c4d8f3f3bb91e36154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a68735c7d29ded7617c0c25442435ac') in 0.047377 seconds
-  Import took 0.049692 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalk_noWeapon.fbx
-  artifactKey: Guid(50feca8597c87134085fcea20999f76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalk_noWeapon.fbx using Guid(50feca8597c87134085fcea20999f76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcc13ce63a3818b1e55e336d652c1bcb') in 0.044606 seconds
-  Import took 0.046931 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashRight_noWeapon.fbx
-  artifactKey: Guid(b89c2f9753f653a4aa86a088d7578e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashRight_noWeapon.fbx using Guid(b89c2f9753f653a4aa86a088d7578e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c655e2585ba443b0f134d3bed3c25a37') in 0.044279 seconds
-  Import took 0.046828 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Slide_noWeapon.fbx
-  artifactKey: Guid(dbffc2dd934c6d142afcb9933e6ba04f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Slide_noWeapon.fbx using Guid(dbffc2dd934c6d142afcb9933e6ba04f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '509072e40db2010049769904f0c03e2f') in 0.047426 seconds
-  Import took 0.049761 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000285 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/ClimbEnd_noWeapon.fbx
-  artifactKey: Guid(3a08dd7ac5eb23c468e93fd77236ab5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/ClimbEnd_noWeapon.fbx using Guid(3a08dd7ac5eb23c468e93fd77236ab5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fcfecf60bc98faf56c5c72fae51bf79') in 0.046207 seconds
-  Import took 0.048691 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/RollLeft_noWeapon.fbx
-  artifactKey: Guid(c168c83dca1404b4abeb4bc30eeb57fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/RollLeft_noWeapon.fbx using Guid(c168c83dca1404b4abeb4bc30eeb57fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3a781f0a6f7710f36bb01c03f3c1509') in 0.045924 seconds
-  Import took 0.048309 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalRun_noWeapon.fbx
-  artifactKey: Guid(e4dbac59d4f6fb5409cca744caf542f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalRun_noWeapon.fbx using Guid(e4dbac59d4f6fb5409cca744caf542f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db4361cd67a7b81c87ded0f53d55f296') in 0.050537 seconds
-  Import took 0.053012 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashBackward_noWeapon.fbx
-  artifactKey: Guid(cdf1361dd7efb30448602ef49beb6078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashBackward_noWeapon.fbx using Guid(cdf1361dd7efb30448602ef49beb6078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95a80619b057efeaf8e8a76987b0491c') in 0.045460 seconds
-  Import took 0.047962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/GetHit_noWeapon.fbx
-  artifactKey: Guid(20849f6ced761ba419d62268e4bb8210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/GetHit_noWeapon.fbx using Guid(20849f6ced761ba419d62268e4bb8210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e495ebc06843664682604676b4cdb692') in 0.048738 seconds
-  Import took 0.051115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000272 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/VictoryMaintain_noWeapon.fbx
-  artifactKey: Guid(ded4ec1f59d4a5a419898b8d0fcb84e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/VictoryMaintain_noWeapon.fbx using Guid(ded4ec1f59d4a5a419898b8d0fcb84e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '018c30fd601853813f5190d6930fa348') in 0.045258 seconds
-  Import took 0.047605 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/JumpEnd_noWeapon.fbx
-  artifactKey: Guid(0352d452a228ff24db8a8388495904c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/JumpEnd_noWeapon.fbx using Guid(0352d452a228ff24db8a8388495904c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec1e5c2d9a580fddc8aea01e7451a89c') in 0.048015 seconds
-  Import took 0.050430 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalkBackward_noWeapon.fbx
-  artifactKey: Guid(3afa8adab308d2e4e869eead5fe57e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalkBackward_noWeapon.fbx using Guid(3afa8adab308d2e4e869eead5fe57e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c358f7a0a41ce677e2ec8b1fd8143aa') in 0.049452 seconds
-  Import took 0.052112 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000338 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalkLeft_noWeapon.fbx
-  artifactKey: Guid(577a257755db3694d8a3d9719a2813ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/BattleWalkLeft_noWeapon.fbx using Guid(577a257755db3694d8a3d9719a2813ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e801f03942f589eccfaed19004fc7151') in 0.050691 seconds
-  Import took 0.053298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000273 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Die_noWeapon.fbx
-  artifactKey: Guid(b80eeb877a644004b9a1aab03292eacd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Die_noWeapon.fbx using Guid(b80eeb877a644004b9a1aab03292eacd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e66c4fbf7e75bc0feb407351fa1b106') in 0.053184 seconds
-  Import took 0.055758 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/EquipmentChange_noWeapon.fbx
-  artifactKey: Guid(1a240b2339c9a004a802734e4bb3ccb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/EquipmentChange_noWeapon.fbx using Guid(1a240b2339c9a004a802734e4bb3ccb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '912e24da110226b1d0101071ae38b382') in 0.047094 seconds
-  Import took 0.049533 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000266 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashLeft_noWeapon.fbx
-  artifactKey: Guid(285ec42f2320b264fa918acd8849cb69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DashLeft_noWeapon.fbx using Guid(285ec42f2320b264fa918acd8849cb69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d1ae1f3d9367021be6aa4c903bf1675') in 0.045329 seconds
-  Import took 0.047648 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/PotionDrink_noWeapon.fbx
-  artifactKey: Guid(b8aae61d58a1fa040b5fa7abc95da38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/PotionDrink_noWeapon.fbx using Guid(b8aae61d58a1fa040b5fa7abc95da38a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '129160122038c184a75c8bf7e5818848') in 0.047830 seconds
-  Import took 0.050192 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000293 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/PickUp_noWeapon.fbx
-  artifactKey: Guid(c58990ecb3e07d44a9b8f1d1492510f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/PickUp_noWeapon.fbx using Guid(c58990ecb3e07d44a9b8f1d1492510f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c76fd5067ac65612d235f0dff39c5fcd') in 0.048110 seconds
-  Import took 0.050477 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Roll_noWeapon.fbx
-  artifactKey: Guid(da90c88dad6e4e545b158a0fef55c505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Roll_noWeapon.fbx using Guid(da90c88dad6e4e545b158a0fef55c505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe258edd2176a8d133f710db7f9ed87f') in 0.045395 seconds
-  Import took 0.047700 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/RollBack_noWeapon.fbx
-  artifactKey: Guid(397fc095613b40940b6a2bd01155443f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/RollBack_noWeapon.fbx using Guid(397fc095613b40940b6a2bd01155443f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0325103cb5848b527886c09232c309b') in 0.046367 seconds
-  Import took 0.048776 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/SwimForward_noWeapon.fbx
-  artifactKey: Guid(1275f10df64edc94b8c9d0a2c9ca5f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/SwimForward_noWeapon.fbx using Guid(1275f10df64edc94b8c9d0a2c9ca5f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc6b481916a3beda47990d840b6d4c67') in 0.049381 seconds
-  Import took 0.052008 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/JumpStart_noWeapon.fbx
-  artifactKey: Guid(fcdb7c507e40e7345854172a0c5bddf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/JumpStart_noWeapon.fbx using Guid(fcdb7c507e40e7345854172a0c5bddf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285a66e7b37dc305041c16407194cdb2') in 0.044998 seconds
-  Import took 0.047639 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalRunBack_noWeapon.fbx
-  artifactKey: Guid(30facee24d3cd804d83911b35f44ee05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/NormalRunBack_noWeapon.fbx using Guid(30facee24d3cd804d83911b35f44ee05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90bba8245666ffd4d3d79c18bee0ebfd') in 0.047413 seconds
-  Import took 0.049884 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Idle_noWeapon.fbx
-  artifactKey: Guid(392dc25dd8bd7f24387ce049f5e53ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Idle_noWeapon.fbx using Guid(392dc25dd8bd7f24387ce049f5e53ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0919e0e7fc388bbe8695588b12eceba') in 0.045582 seconds
-  Import took 0.047975 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Dizzy_noWeapon.fbx
-  artifactKey: Guid(0bf983e2aa5e3314090a24c78fbf8230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/Dizzy_noWeapon.fbx using Guid(0bf983e2aa5e3314090a24c78fbf8230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb64261d35fbe7a5d6c2a423e54390d2') in 0.047555 seconds
-  Import took 0.049874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000272 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DieRecover_noWeapon.fbx
-  artifactKey: Guid(8ccf2c53b1e1a3345b43d08a71092f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/DieRecover_noWeapon.fbx using Guid(8ccf2c53b1e1a3345b43d08a71092f0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '157825164ac7fc07d426fae658f8be61') in 0.051579 seconds
-  Import took 0.053953 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/RollRight_noWeapon.fbx
-  artifactKey: Guid(319796c6ff6ae1f44aeda624871619c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ImportedAssets/ModularRPGHeroesPolyArt/Animations/NoWeapon/RollRight_noWeapon.fbx using Guid(319796c6ff6ae1f44aeda624871619c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec5f6e1f5752f71b5c09678faa7a457') in 0.044463 seconds
-  Import took 0.046813 seconds .
+  Time since last request: 92.908838 seconds.
+  path: Assets/Scenes/SandBox/SandBox2.unity
+  artifactKey: Guid(13be8a31d4881a748b89e6195936ef14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SandBox/SandBox2.unity using Guid(13be8a31d4881a748b89e6195936ef14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4db3339c057db6b617b0466cdc1bb53') in 0.020346 seconds
+  Import took 0.022834 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001108 seconds.
+Registered in 0.000783 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.868 seconds
+- Completed reload, in  0.839 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 161.7 MB.
+Unloading 1429 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.5 MB.
+System memory in use after: 160.4 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1995.
-Total: 1.943600 ms (FindLiveObjects: 0.133800 ms CreateObjectMapping: 0.033600 ms MarkObjects: 1.602000 ms  DeleteObjects: 0.173500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 128.320903 seconds.
-  path: Assets/Game/Charaters/Animations
-  artifactKey: Guid(4d7d5933d48db924496e97002cab1b64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Animations using Guid(4d7d5933d48db924496e97002cab1b64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99012de1e444a10b253367285f2be45c') in 0.004922 seconds
-  Import took 0.006962 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1970.
+Total: 1.635700 ms (FindLiveObjects: 0.112300 ms CreateObjectMapping: 0.031300 ms MarkObjects: 1.326000 ms  DeleteObjects: 0.165400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Game/Charaters/Animations/myCombo01_DoubleSword.anim
-  artifactKey: Guid(3bf4f75a53d05b541b0c80e4d021d25a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Charaters/Animations/myCombo01_DoubleSword.anim using Guid(3bf4f75a53d05b541b0c80e4d021d25a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16b782c67edf0c702fb03970cb986e12') in 0.026981 seconds
-  Import took 0.029062 seconds .
+  Time since last request: 44.156886 seconds.
+  path: Assets/Scenes/SandBox/SandBox2.unity
+  artifactKey: Guid(13be8a31d4881a748b89e6195936ef14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SandBox/SandBox2.unity using Guid(13be8a31d4881a748b89e6195936ef14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9875f8d9f2f2f2e2210c30ffb773dc2') in 0.017164 seconds
+  Import took 0.019391 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001024 seconds.
+Registered in 0.001277 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.851 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 161.7 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1998.
-Total: 1.866100 ms (FindLiveObjects: 0.215500 ms CreateObjectMapping: 0.055100 ms MarkObjects: 1.430700 ms  DeleteObjects: 0.164200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 206.670279 seconds.
-  path: Assets/Game/Core
-  artifactKey: Guid(62881af1c1e15a444a550c9bdf9c726e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Core using Guid(62881af1c1e15a444a550c9bdf9c726e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cb21a95de5b413437d6f2376f389740') in 0.006702 seconds
-  Import took 0.009256 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000718 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.878 seconds
+- Completed reload, in  0.830 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 161.7 MB.
+Unloading 1429 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.5 MB.
+System memory in use after: 160.4 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2001.
-Total: 1.593200 ms (FindLiveObjects: 0.145700 ms CreateObjectMapping: 0.039300 ms MarkObjects: 1.247400 ms  DeleteObjects: 0.160200 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1973.
+Total: 1.824800 ms (FindLiveObjects: 0.128200 ms CreateObjectMapping: 0.039500 ms MarkObjects: 1.485200 ms  DeleteObjects: 0.171200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001002 seconds.
+Registered in 0.001043 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.832 seconds
+- Completed reload, in  0.984 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1428 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 161.8 MB.
+Unloading 1429 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.6 MB.
+System memory in use after: 160.4 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2004.
-Total: 1.633300 ms (FindLiveObjects: 0.115800 ms CreateObjectMapping: 0.031600 ms MarkObjects: 1.323900 ms  DeleteObjects: 0.161300 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1976.
+Total: 1.704400 ms (FindLiveObjects: 0.112800 ms CreateObjectMapping: 0.031700 ms MarkObjects: 1.382500 ms  DeleteObjects: 0.176900 ms)
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
