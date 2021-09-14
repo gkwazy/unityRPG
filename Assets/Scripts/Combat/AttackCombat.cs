@@ -61,7 +61,6 @@ namespace RPG.Combat
 
         public bool CanAttack(GameObject attackTarget)
         {
-            print(attackTarget);
             if (attackTarget == null)
             {
                 return false;
@@ -93,7 +92,6 @@ namespace RPG.Combat
         //Add animation hit
         void Hit()
         {
-            print("HitCalled");
             if (target == null)
             {
                 return;
