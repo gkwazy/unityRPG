@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!136 &1299442257
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3895337993677124663}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.23
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.66, z: 0}
 --- !u!114 &-1358306806999777619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,7 +40,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  maxSpeed: 5
 --- !u!1001 &1815337681014471748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,31 +57,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.87
+      value: 0.0830418
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.42
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -44.55
+      value: 0.4852481
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.965926
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.2588186
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -104,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
