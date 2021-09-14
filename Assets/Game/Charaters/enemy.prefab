@@ -26,13 +26,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2229c4ecd39e0d42ac53da0b8305c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 5
+  chaseDistance: 9
   suspicionTime: 5
   waypointDwellTime: 3
   patrolPath: {fileID: 0}
   waypointTolerance: 1
-  attackSpeed: 3
-  patrolSpeed: 2
+  patrolSpeedFraction: 0.5
 --- !u!114 &8477212866242694302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +55,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1664719217, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664719217, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1664719218, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_Speed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_RootOrder
@@ -69,15 +72,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.16
+      value: -0.4352537
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000023841858
+      value: -2.2653286
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.67
+      value: 19.930145
       objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalRotation.w

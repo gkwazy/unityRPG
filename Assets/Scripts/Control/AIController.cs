@@ -16,8 +16,12 @@ namespace RPG.Control
         [SerializeField] float waypointDwellTime = 3f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
-        [SerializeField] float attackSpeed = 3f;
-        [SerializeField] float patrolSpeed = 2f;
+
+        [Range(0,1)]
+        [SerializeField] float patrolSpeedFraction = 0.2f;
+
+        //[SerializeField] float attackSpeed = 3f;
+        //[SerializeField] float patrolSpeed = 2f;
 
 
         AttackCombat attackCombat;
@@ -73,7 +77,7 @@ namespace RPG.Control
 
         private void PatrolBehaviour()
         {
-            navMeshAgent.speed = patrolSpeed;
+            // navMeshAgent.speed = patrolSpeed;
             Vector3 nextPosition = guardPosition;
             if (patrolPath != null)
             {
@@ -86,7 +90,7 @@ namespace RPG.Control
             }
             if ( timeSincArrivedAtWaypoint > waypointDwellTime)
             {
-                movement.StartMoveAction(nextPosition);
+                movement.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
            
         }
@@ -112,14 +116,14 @@ namespace RPG.Control
 // methonds to help have the enemy look for player for a short time or attack player
         private void SuspicionBehaviour()
         {
-            navMeshAgent.speed = attackSpeed;
+            // navMeshAgent.speed = attackSpeed;
             GetComponent<ActionSchedular>().CancelCurrentAction();
         }
 
         private void AttackBehavoir()
         {
+            //navMeshAgent.speed = attackSpeed;
             timeSincLastSawPlayer = 0;
-            navMeshAgent.speed = attackSpeed;
             attackCombat.Attack(player);
         }
 
