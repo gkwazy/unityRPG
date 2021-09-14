@@ -24,7 +24,7 @@ namespace RPG.Combat
 
             if (!GetIsInRange())
             {
-                GetComponent<CharaterMovement>().MoveTo(target.transform.position);
+                GetComponent<CharaterMovement>().MoveTo(target.transform.position, 1f);
             }
             else
             {
@@ -81,6 +81,7 @@ namespace RPG.Combat
         {
             StopAttack();
             target = null;
+            GetComponent<CharaterMovement>().Cancel();
         }
 
         private void StopAttack()
