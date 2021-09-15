@@ -300,6 +300,10 @@ PrefabInstance:
       value: Portal (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4311236181462118028, guid: f6856d324b79ce04dbc7a2b89bbf9cf8, type: 3}
+      propertyPath: destination
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311236181462118028, guid: f6856d324b79ce04dbc7a2b89bbf9cf8, type: 3}
       propertyPath: sceneToLoad
       value: 0
       objectReference: {fileID: 0}
@@ -609,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4311236181462118028, guid: f6856d324b79ce04dbc7a2b89bbf9cf8, type: 3}
       propertyPath: destination
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4311236181462118028, guid: f6856d324b79ce04dbc7a2b89bbf9cf8, type: 3}
       propertyPath: sceneToLoad
