@@ -20,7 +20,7 @@ namespace RPG.Cinematics
         {
           
            player.GetComponent<PlayerController>().enabled = false; 
-           player.GetComponent<ActionSchedular>().CancelCurrentAction();
+           player.GetComponent<ActionScheduler>().CancelCurrentAction();
         }
 
         void EnableControl(PlayableDirector pd)

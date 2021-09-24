@@ -5,68 +5,91 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 namespace RPG.Saving
 {
     public class SavingSystem : MonoBehaviour
     {
+
+        public IEnumerator LoadLastScene(string saveFile)
+        {
+            Dictionary<string, object> state = LoadFile(saveFile);
+            if (state.ContainsKey("lastSceneBuildIndex"))
+            {
+                int buildIndex = (int)state["lastSceneBuildIndex"];
+                if ( buildIndex != SceneManager.GetActiveScene().buildIndex)
+                {
+                    yield return SceneManager.LoadSceneAsync(buildIndex);
+                }
+            }
+            RestoreState(state);
+        }
+
        public void Save(string saveFile)
        {
+           Dictionary<string, object> state = LoadFile(saveFile);
+           CaptureState(state);
+           SaveFile(saveFile, state);
+       }
+
+        public void Load(string saveFile)
+        {
+            RestoreState(LoadFile(saveFile));
+                
+        }
+
+        private Dictionary<string, object> LoadFile(string saveFile)
+        {
+            
+            string path = GetPathFromFile(saveFile);
+            if(!File.Exists(path))
+            {
+                return new Dictionary<string, object>();
+            }
+            using (FileStream stream = File.Open(path, FileMode.Open))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                return (Dictionary<string, object>)formatter.Deserialize(stream);
+            }
+        }
+
+        private void SaveFile(string saveFile, object state)
+        {
             string path = GetPathFromFile(saveFile);
             print("Saving to " + path);
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
-                Transform playerTransform = GetPlayerTransform();
-
                 BinaryFormatter formatter = new BinaryFormatter();
-                SerializableVector3 postion = new SerializableVector3(playerTransform.position);
-
-                formatter.Serialize(stream,postion);
+                formatter.Serialize(stream,state);
             }
-       }
+        }
 
-        
 
-        public void Load(string saveFile)
+        private void CaptureState(Dictionary<string, object> state)
         {
-                print("Loading from " + GetPathFromFile(saveFile));
-                string path = GetPathFromFile(saveFile);
-                print("Saving to " + path);
-                using (FileStream stream = File.Open(path, FileMode.Open))
+           foreach(SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
+           {
+               state[saveable.GetUniqueIdentifier()] = saveable.CaptureState();
+           }
+           state["lastSceneBuildIndex"] = SceneManager.GetActiveScene().buildIndex;
+        }
+
+        private void RestoreState(Dictionary<string, object> state)
+        {
+            Dictionary<string, object> stateDict = state;
+            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
+            {
+                string id = saveable.GetUniqueIdentifier();
+                if (state.ContainsKey(id))
                 {
-                    Transform playerTransform = GetPlayerTransform();
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    SerializableVector3 position = (SerializableVector3) formatter.Deserialize(stream);
-                    playerTransform.position =position.ToVector(); 
+                    saveable.RestoreState(state[id]);
                 }
-                
+               
+            }
         }
 
-        private Transform GetPlayerTransform()
-        {
-            return GameObject.FindWithTag("Player").transform;
-        }
-
-       private byte[] SerializeVector(Vector3 vector)
-       {
-           byte[] vectorBytes = new byte[12];
-            BitConverter.GetBytes(vector.x).CopyTo(vectorBytes, 0);
-            BitConverter.GetBytes(vector.y).CopyTo(vectorBytes, 4);
-            BitConverter.GetBytes(vector.z).CopyTo(vectorBytes, 8);
-            return vectorBytes;
-       }
-
-       private Vector3 DeserializeVector(byte[] bytes)
-       {
-           Vector3 result = new Vector3();
-           result.x = BitConverter.ToSingle(bytes,0);
-           result.y = BitConverter.ToSingle(bytes, 4);
-           result.z = BitConverter.ToSingle(bytes, 8);
-           return result;
-       }
-
-       private string GetPathFromFile(string saveFile)
+        private string GetPathFromFile(string saveFile)
        {
            
            return Path.Combine(Application.persistentDataPath, saveFile + ".sav");

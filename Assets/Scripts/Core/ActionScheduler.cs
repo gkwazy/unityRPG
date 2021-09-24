@@ -3,7 +3,7 @@ using UnityEngine;
 namespace RPG.Core
 {
 
-    public class ActionSchedular : MonoBehaviour 
+    public class ActionScheduler : MonoBehaviour 
     {
         IAction currentAction;
 

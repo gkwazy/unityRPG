@@ -70,6 +70,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1536450997287358287, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 2571323416081723322, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_RootOrder
       value: 0
