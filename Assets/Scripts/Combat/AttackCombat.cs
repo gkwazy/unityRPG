@@ -1,7 +1,7 @@
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
-
+using System;
 
 namespace RPG.Combat
 {
@@ -9,10 +9,24 @@ namespace RPG.Combat
 
         [SerializeField] float weaponRange = 2f; 
         [SerializeField] float timeBetweenAttacks = 1f;
-        [SerializeField] float weaponDamage = 5f;       
+        [SerializeField] float weaponDamage = 5f;
+        [SerializeField] Transform handTransform = null; //might not need
+        [SerializeField] Weapon weapon = null;
+       
         
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
+
+
+        private void Awake() 
+        {
+            
+        }
+
+        private void Start() 
+        {
+            SpawnWeapon();
+        }
 
         private void Update() {
 
@@ -34,6 +48,14 @@ namespace RPG.Combat
             }
         }
 
+        private void SpawnWeapon()
+        {
+            if ( weapon == null) return;
+            Animator animator = GetComponent<Animator>();
+            weapon.Spawn(handTransform, animator);
+
+        }
+
         private void AttackBehavoir()
         {
             transform.LookAt(target.transform.position);
@@ -50,7 +72,7 @@ namespace RPG.Combat
 
         private void TriggerAttack()
         {
-            GetComponent<Animator>().ResetTrigger("attack");
+            GetComponent<Animator>().ResetTrigger("stopAttack");
             GetComponent<Animator>().SetTrigger("attack");
         }
 
@@ -85,13 +107,14 @@ namespace RPG.Combat
 
         private void StopAttack()
         {
-            GetComponent<Animator>().ResetTrigger("stopAttack");
+            GetComponent<Animator>().ResetTrigger("attack");
             GetComponent<Animator>().SetTrigger("stopAttack");
         }
 
         //Add animation hit
         void Hit()
         {
+            print("tyring to hit");
             if (target == null)
             {
                 return;
