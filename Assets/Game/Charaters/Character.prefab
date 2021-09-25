@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7101886604477735649}
   - component: {fileID: 4764473737903749303}
   - component: {fileID: 1536450997287358287}
+  - component: {fileID: 4810386845019058563}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -184,3 +185,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+--- !u!54 &4810386845019058563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404269714980636787}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

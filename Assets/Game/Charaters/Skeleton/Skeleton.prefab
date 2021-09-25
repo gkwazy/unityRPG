@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8487fe44d9dbd4d9a1ff3183a327bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponRange: 2
   timeBetweenAttacks: 1.5
-  weaponDamage: 5
+  rightHandTransform: {fileID: 5314121035457341464}
+  leftHandTransform: {fileID: 5305543120379530214}
+  defaultWeapon: {fileID: 11400000, guid: 2a6f7ecdb92f07a48a93e8a1d83df08b, type: 2}
 --- !u!1001 &292342497588621588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 22100000, guid: beb973d82d9f0444085af2438c1f1b48, type: 2}
     - target: {fileID: 3404269714980636787, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: healthPoints
@@ -148,6 +149,10 @@ PrefabInstance:
     - target: {fileID: 1088474434442572, guid: ebf2cc118768d314988702254deb07a7, type: 3}
       propertyPath: m_Name
       value: SkeletonPBR
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616343029644116, guid: ebf2cc118768d314988702254deb07a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4333204578251230, guid: ebf2cc118768d314988702254deb07a7, type: 3}
       propertyPath: m_RootOrder
@@ -194,6 +199,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 137309407090830218, guid: ebf2cc118768d314988702254deb07a7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137309407090830218, guid: ebf2cc118768d314988702254deb07a7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 94d5d665d0a8c574597f451ca909d580, type: 2}
@@ -207,3 +216,13 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 94d5d665d0a8c574597f451ca909d580, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf2cc118768d314988702254deb07a7, type: 3}
+--- !u!4 &5305543120379530214 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4838593512478048, guid: ebf2cc118768d314988702254deb07a7, type: 3}
+  m_PrefabInstance: {fileID: 5309783506333425286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5314121035457341464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4414652245538462, guid: ebf2cc118768d314988702254deb07a7, type: 3}
+  m_PrefabInstance: {fileID: 5309783506333425286}
+  m_PrefabAsset: {fileID: 0}
