@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+  isHoming: 0
 --- !u!65 &2686745769757848787
 BoxCollider:
   m_ObjectHideFlags: 0
