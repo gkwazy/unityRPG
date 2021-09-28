@@ -9,6 +9,11 @@ public class Projectile : MonoBehaviour
     
     [SerializeField] float speed = 1;
     [SerializeField] bool isHoming = true;
+    [SerializeField] GameObject hitEffect = null;
+    [SerializeField] float MaxLifeTime = 5f;
+    [SerializeField] GameObject[] destroyOnHit = null;
+    [SerializeField] float lifeAfterImpact = 2;
+
 
     Health target = null;
     float damage = 0;
@@ -33,6 +38,7 @@ public class Projectile : MonoBehaviour
         this.target = target;
         this.damage = damage;
 
+        Destroy(gameObject, MaxLifeTime);
     }
 
     private Vector3 GetAimLocation()
@@ -54,7 +60,17 @@ public class Projectile : MonoBehaviour
         }
 
         target.TakeDamage(damage);
-        Destroy(gameObject);
+
+        if(hitEffect != null)
+        {
+            Instantiate(hitEffect, GetAimLocation(), transform.rotation);
+        }
+
+        foreach (GameObject toDestroy in destroyOnHit)
+        {
+            Destroy(toDestroy);
+        }
+        Destroy(gameObject, lifeAfterImpact);
         
     }
 }
