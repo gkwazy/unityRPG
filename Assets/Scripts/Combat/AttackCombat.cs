@@ -114,13 +114,19 @@ namespace RPG.Combat
         //Add animation hit
         void Hit()
         {
-            print("tyring to hit");
             if (target == null)
             {
                 return;
             }
             
-            target.TakeDamage(currentWeapon.GetWeaponDamage());
+            if (currentWeapon.HasProjectile())
+            {
+                currentWeapon.LaunchProjectile(rightHandTransform,leftHandTransform, target);
+            }
+            else
+            {
+                target.TakeDamage(currentWeapon.GetWeaponDamage());
+            }
         }
 
     }
