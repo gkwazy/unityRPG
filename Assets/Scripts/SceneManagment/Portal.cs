@@ -48,6 +48,8 @@ namespace RPG.SceneMangement
 
             savingWrapper.Load();
 
+            yield return new WaitForEndOfFrame();
+
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
 

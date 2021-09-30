@@ -41,7 +41,7 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   rightHandTransform: {fileID: 4909636756087304850}
   leftHandTransform: {fileID: 4909636756087304848}
-  defaultWeapon: {fileID: 0}
+  defaultWeapon: {fileID: 11400000, guid: 87cbfeac9cd213445aa6b19274d1ff38, type: 2}
 --- !u!114 &4470360855883959856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +134,10 @@ PrefabInstance:
     - target: {fileID: 3404269714980636787, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107623558672367355, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: characterClass
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 461f8afbec01c604c93ee959698ec198, type: 3}

@@ -48,6 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   isHoming: 1
+  hitEffect: {fileID: 0}
+  MaxLifeTime: 5
+  destroyOnHit: []
+  lifeAfterImpact: 0
 --- !u!65 &2686745769757848787
 BoxCollider:
   m_ObjectHideFlags: 0

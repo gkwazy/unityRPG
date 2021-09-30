@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 4107623558672367355, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: characterClass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: healthPoints
       value: 20

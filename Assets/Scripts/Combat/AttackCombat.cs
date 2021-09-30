@@ -2,17 +2,17 @@ using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
 using System;
+using RPG.Saving;
 
 namespace RPG.Combat
 {
-    public class AttackCombat : MonoBehaviour, IAction {
+    public class AttackCombat : MonoBehaviour, IAction, ISaveable {
 
         
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] Weapon defaultWeapon = null;
-       
         
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
@@ -20,12 +20,10 @@ namespace RPG.Combat
 
         private void Awake() 
         {
-            
-        }
-
-        private void Start() 
-        {
-            EquipWeapon(defaultWeapon);
+            if ( currentWeapon == null)
+            {
+                EquipWeapon(defaultWeapon);
+            }
         }
 
         private void Update() {
@@ -50,6 +48,10 @@ namespace RPG.Combat
 
         public void EquipWeapon(Weapon weapon)
         {
+            if (weapon == null)
+            {
+                Debug.Log($"{name} is trying to equip a null weapon.");
+            }
             currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
@@ -129,5 +131,20 @@ namespace RPG.Combat
             }
         }
 
+        public object CaptureState()
+        {
+            if (currentWeapon == null)
+            {
+                Debug.Log($"{name} does not have a weapon equipped in CaptureState()");
+            }
+            return currentWeapon.name;
+        }
+
+        public void RestoreState(object state)
+        {
+            string defaultWeaponName = (string) state;
+            Weapon weapon = Resources.Load<Weapon>(defaultWeaponName);
+            EquipWeapon(weapon);
+        }
     }
 }
