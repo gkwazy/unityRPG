@@ -12,15 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41e495f6cc59694bb2f8317663f2047, type: 3}
   m_Name: Progession
   m_EditorClassIdentifier: 
-  characterClass:
+  characterClasses:
   - characterClass: 0
-    health:
-    - 50
-    - 100
-    - 200
-    - 400
-    - 700
+    stats:
+    - stat: 0
+      levels:
+      - 100
+      - 200
+      - 300
   - characterClass: 1
-    health: []
+    stats:
+    - stat: 0
+      levels:
+      - 20
+    - stat: 1
+      levels:
+      - 10
   - characterClass: 2
-    health: []
+    stats:
+    - stat: 0
+      levels:
+      - 20
+    - stat: 1
+      levels:
+      - 20
+  - characterClass: 3
+    stats:
+    - stat: 0
+      levels:
+      - 50
+    - stat: 1
+      levels:
+      - 50

@@ -10,5 +10,10 @@ namespace RPG.Stats
         [SerializeField] int startingLevel = 1;
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progession progession = null;
+
+        public float GetStat(Stat stat)
+        {
+            return progession.GetStat(stat, characterClass, startingLevel); 
+        }
     }
 }

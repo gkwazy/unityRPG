@@ -6,15 +6,44 @@ namespace RPG.Stats
     public class Progession : ScriptableObject
     {
 
-        [SerializeField] ProgessionCharacterClass[] characterClass = null;
+        [SerializeField] ProgessionCharacterClass[] characterClasses = null;
+
+        public float GetStat(Stat stat, CharacterClass characterClass, int level)
+        {
+           foreach (ProgessionCharacterClass progression in characterClasses)
+           {
+               if (progression.characterClass != characterClass) continue;
+
+               foreach (ProgessionStat progressStat in progression.stats)
+               {
+                  if (progressStat.stat != stat) continue;
+
+                  if (progressStat.levels.Length < level) continue;
+                  
+                    return progressStat.levels[level -1];
+                  
+                  
+               }
+           }
+           return 0;
+        }
 
         [System.Serializable]
         class ProgessionCharacterClass
         {
-            [SerializeField] CharacterClass characterClass;
-            [SerializeField] float[] health;
-
+            public CharacterClass characterClass;
+            public ProgessionStat[] stats;
         }
+
+        [System.Serializable]
+        class ProgessionStat
+        {
+            public Stat stat;
+            public float[] levels;
+        }
+
+
+
     }
 
 }
