@@ -7,13 +7,17 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour,ISaveable
     {
-        [SerializeField] float healthPoints = 100f;
+        float healthPoints = -1f;
 
         bool isDead = false;
 
 
     private void Awake() 
     {
+        if (healthPoints < 0)
+        {
+
+        }
         healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
     }
 
@@ -24,11 +28,8 @@ namespace RPG.Attributes
 
         public void RestoreState(object state)
         {
-            Debug.Log($"{name}'s health before restore is {healthPoints}");
-          
             healthPoints = (float) state;
-            Debug.Log($"{name}'s health before after is {healthPoints}");
-
+           
             if (healthPoints <= 0)
             {
                 Die();
@@ -54,6 +55,7 @@ namespace RPG.Attributes
 
         public float getPercentage()
         {
+            Debug.Log($"{name}'s health before restore is { GetComponent<BaseStats>().GetStat(Stat.Health)}");
             return (healthPoints / GetComponent<BaseStats>().GetStat(Stat.Health)) * 100;
         }
 

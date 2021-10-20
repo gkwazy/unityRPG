@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System;
 
 namespace RPG.Stats
 {
@@ -7,25 +9,48 @@ namespace RPG.Stats
     {
 
         [SerializeField] ProgessionCharacterClass[] characterClasses = null;
+        
+        Dictionary<CharacterClass, Dictionary<Stat, float[]>> lookupTable = null;
 
         public float GetStat(Stat stat, CharacterClass characterClass, int level)
         {
-           foreach (ProgessionCharacterClass progression in characterClasses)
+
+            BuildLookup();
+
+            float[] levels =  lookupTable[characterClass][stat];
+            if (levels.Length >= level)
+            {
+                return levels[level-1]; 
+            }
+            return 0;
+        }
+
+        public int GetLevels(Stat stat, CharacterClass characterClass)
+        {
+            BuildLookup();
+
+            float[] levels = lookupTable[characterClass][stat];
+            return levels.Length;
+        }
+
+        private void BuildLookup()
+        {
+           if ( lookupTable == null) 
            {
-               if (progression.characterClass != characterClass) continue;
+               lookupTable = new Dictionary<CharacterClass, Dictionary<Stat, float[]>>();
 
-               foreach (ProgessionStat progressStat in progression.stats)
-               {
-                  if (progressStat.stat != stat) continue;
+                foreach (ProgessionCharacterClass progression in characterClasses)
+                {
+                    var statLookupTable = new Dictionary<Stat, float[]>();
 
-                  if (progressStat.levels.Length < level) continue;
-                  
-                    return progressStat.levels[level -1];
-                  
-                  
-               }
+                    foreach (ProgessionStat progressStat in progression.stats)
+                    {
+                        statLookupTable[progressStat.stat] = progressStat.levels;
+                    }
+
+                    lookupTable[progression.characterClass] = statLookupTable;
+                }
            }
-           return 0;
         }
 
         [System.Serializable]

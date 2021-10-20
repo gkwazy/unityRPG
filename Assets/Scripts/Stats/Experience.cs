@@ -2,7 +2,7 @@ using UnityEngine;
 using RPG.Saving;
 using System;
 
-namespace RPG.Attributes
+namespace RPG.Stats
 {
     public class Experience : MonoBehaviour, ISaveable
     {
@@ -20,9 +20,7 @@ namespace RPG.Attributes
 
         public void RestoreState(object state)
         {
-            // Debug.Log($"{name}'s health before restore is {healthPoints}");
             experiencePoints = (float)state;
-            // Debug.Log($"{name}'s health before after is {healthPoints}");
         }
 
         public float getExperiencePoints()
