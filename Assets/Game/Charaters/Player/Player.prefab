@@ -42,6 +42,19 @@ MonoBehaviour:
   rightHandTransform: {fileID: 4909636756087304850}
   leftHandTransform: {fileID: 4909636756087304848}
   defaultWeapon: {fileID: 11400000, guid: 87cbfeac9cd213445aa6b19274d1ff38, type: 2}
+--- !u!114 &1359261985391455429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895337993677124663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c89ed600578a940bd36d9578bc6a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experiencePoints: 0
 --- !u!114 &4470360855883959856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,19 +69,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   maxSpeed: 5
---- !u!114 &1359261985391455429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3895337993677124663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c89ed600578a940bd36d9578bc6a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  experiencePoints: 0
 --- !u!1001 &1815337681014471748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -152,6 +152,10 @@ PrefabInstance:
       propertyPath: characterClass
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4107623558672367355, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: levelUpParticals
+      value: 
+      objectReference: {fileID: 5972832346165999903, guid: 4d3b673a679c098448aaad9e03edc8a4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
 --- !u!1 &3895337993677124663 stripped
