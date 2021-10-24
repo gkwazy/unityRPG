@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.DeveloperTools;
 using UnityEngine;
 
 namespace RPG.Stats
@@ -12,19 +13,35 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progession progession = null;
         [SerializeField] GameObject levelUpParticals = null;
+        [SerializeField] bool shouldUseModifiers = false;
 
         public event Action onLevelUp;
 
-        int currentLevel = 0;
+        SlowLoad<int> currentLevel;
+        Experience experience;
+
+        private void Awake() {
+            experience= GetComponent<Experience>();
+            currentLevel = new SlowLoad<int>(CalLevel);
+        }
 
         private void Start()
          {
-            currentLevel = CalLevel();
-            Debug.Log("currentlevel " + currentLevel);
-            Experience experience = GetComponent<Experience>();
+            currentLevel.Initialize();
+        }
+
+        private void OnEnable() 
+        {
             if (experience != null)
             {
                 experience.onExperienceGained += UpdateLevel;
+            }
+        }
+
+        private void OnDisable() {
+            if (experience != null)
+            {
+                experience.onExperienceGained -= UpdateLevel;
             }
         }
 
@@ -32,9 +49,9 @@ namespace RPG.Stats
         void UpdateLevel()
         {
             int newLevel = CalLevel();
-            if (newLevel > currentLevel)
+            if (newLevel > currentLevel.value)
             {
-                currentLevel = newLevel;
+                currentLevel.value = newLevel;
                 LevelUpEffect();
                 onLevelUp();
             }
@@ -48,16 +65,56 @@ namespace RPG.Stats
 
         public float GetStat(Stat stat)
         {
-            return progession.GetStat(stat, characterClass, GetLevel()); 
+            return (GetBaseStat(stat) + GetAdditiveModifier(stat)) * (1 + (GetPercentageModifier(stat)/100));
         }
+
+
+        private float GetBaseStat(Stat stat)
+        {
+            return progession.GetStat(stat, characterClass, GetLevel());
+        }
+
 
         public int GetLevel()
         {
-            if (currentLevel <= 0)
+            return currentLevel.value;
+        }
+
+        private float GetAdditiveModifier(Stat stat)
+        {
+            float total = 0;
+            if(!shouldUseModifiers)
             {
-                currentLevel = CalLevel();
+                return total;
             }
-            return currentLevel;
+
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach ( float modifier in provider.GetAdditiveModifier(stat))
+                {
+                    total += modifier;
+                }
+            }
+
+            return total;
+        }
+
+        private float GetPercentageModifier(Stat stat)
+        {
+            float total = 0;
+            if (!shouldUseModifiers)
+            {
+                return total;
+            }
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach (float modifier in provider.GetPercentageModifiers(stat))
+                {
+                    total += modifier;
+                }
+            }
+
+            return total;
         }
 
 

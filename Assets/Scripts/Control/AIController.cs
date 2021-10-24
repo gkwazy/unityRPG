@@ -7,6 +7,7 @@ using RPG.Movement;
 using UnityEngine.AI;
 using System;
 using RPG.Attributes;
+using RPG.DeveloperTools;
 
 namespace RPG.Control
 {
@@ -31,18 +32,23 @@ namespace RPG.Control
         CharaterMovement movement;
         NavMeshAgent navMeshAgent;
 
-        Vector3 guardPosition;
+        SlowLoad<Vector3> guardPosition;
         float timeSincLastSawPlayer = Mathf.Infinity;
         float timeSincArrivedAtWaypoint = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
-        private void Start() {
+
+        private void Awake() {
             attackCombat = GetComponent<AttackCombat>();
             player = GameObject.FindWithTag("Player");
             health = GetComponent<Health>();
-            guardPosition = transform.position;
             movement = GetComponent<CharaterMovement>();
             navMeshAgent = GetComponent<NavMeshAgent>();
+            guardPosition = new SlowLoad<Vector3>(GetGuardPosition);
+        }
+
+        private void Start() {
+            guardPosition.Initialize();
         }
 
         private void Update()
@@ -64,10 +70,14 @@ namespace RPG.Control
             else
             {
                 PatrolBehaviour();
-
             }
 
             UpdateTimers();
+        }
+
+        private Vector3 GetGuardPosition()
+        {
+            return transform.position;
         }
 
         private void UpdateTimers()
@@ -79,7 +89,7 @@ namespace RPG.Control
         private void PatrolBehaviour()
         {
             // navMeshAgent.speed = patrolSpeed;
-            Vector3 nextPosition = guardPosition;
+            Vector3 nextPosition = guardPosition.value;
             if (patrolPath != null)
             {
                 if (AtWaypoint())
