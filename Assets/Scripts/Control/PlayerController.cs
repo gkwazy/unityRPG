@@ -3,12 +3,23 @@ using RPG.Movement;
 using RPG.Combat;
 using System;
 using RPG.Attributes;
+using UnityEngine.EventSystems;
 
 namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
         Health health;
+
+        [System.Serializable]
+        struct CursorMapping
+        {
+            public CursorType type;
+            public Texture2D texture;
+            public Vector2 hotspot;
+        }
+
+        [SerializeField] CursorMapping[] cursorMappings = null;
 
         private void Awake() 
         {
@@ -18,36 +29,56 @@ namespace RPG.Control
 
         void Update()
         {
-            if(health.IsDead()) return;
-            if(InteractWithCombat()) return;
+            if(InteractWithUI()) return;
+            if(health.IsDead()) 
+            {
+                SetCursor(CursorType.None);
+                return;
+            }
+            if(InteractWithCompoment()) return;
             if(InteractWithMovement()) return;
-
+            SetCursor(CursorType.None);
         }
 
-        private bool InteractWithCombat()
+        private bool InteractWithCompoment()
         {
-          RaycastHit[] hits =  Physics.RaycastAll(GetMouseRay());
-          foreach ( RaycastHit hit in hits)
-          {
-              AttackTarget target = hit.transform.GetComponent<AttackTarget>();
-              if (target == null)
-              {
-                  continue;
-              }
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            foreach (RaycastHit hit in hits)
+            {
+                IRaycastable [] raycastables = hit.transform.GetComponents<IRaycastable>();
+                foreach (IRaycastable raycastable in raycastables)
+                {
+                    if (raycastable.HandleRaycast(this))
+                    {
+                        SetCursor(raycastable.GetCursorType());
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
 
+        RaycastHit[] RaycastAllSorted()
+        {
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            float[] distances = new float[hits.Length];
+            for(int i = 0; i < hits.Length; i++)
+            {
+                distances[i] = hits[i].distance;
+            }
+            Array.Sort(distances, hits);
 
-              if (!GetComponent<AttackCombat>().CanAttack(target.gameObject))
-              {
-                  continue;
-              }
+            return hits;
+        }
 
-              if(Input.GetMouseButton(0))
-              {
-                  GetComponent<AttackCombat>().Attack(target.gameObject);
-              }
-                return true;
-          }
-          return false;
+        private bool InteractWithUI()
+        {
+           if (EventSystem.current.IsPointerOverGameObject())
+           {
+               SetCursor(CursorType.UI);
+               return true;
+           }
+           return false;
         }
 
         private bool InteractWithMovement()
@@ -60,6 +91,7 @@ namespace RPG.Control
                 {
                     GetComponent<CharaterMovement>().StartMoveAction(hit.point, 1f);
                 }
+                SetCursor(CursorType.Movement);
                return true;
             }
             return false;
@@ -68,6 +100,24 @@ namespace RPG.Control
         private static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
+
+        private void SetCursor(CursorType type)
+        {
+            CursorMapping mapping = getCursorMapping(type);
+            Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
+        }
+
+        private CursorMapping getCursorMapping(CursorType cursorType)
+        {
+            foreach (CursorMapping map in cursorMappings)
+            {
+                if (map.type == cursorType)
+                {
+                    return map;
+                }
+            }
+            return cursorMappings[0];
         }
     }
 }
