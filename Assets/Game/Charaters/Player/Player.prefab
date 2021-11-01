@@ -42,6 +42,8 @@ MonoBehaviour:
   - type: 4
     texture: {fileID: 2800000, guid: 3451779baa5804d40bf1e952eb56a81a, type: 3}
     hotspot: {x: 0, y: 0}
+  maxNavmeshProjectionDistance: 3
+  maxNavPathLength: 40
 --- !u!114 &-996396016107509996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +176,10 @@ PrefabInstance:
       objectReference: {fileID: 5972832346165999903, guid: 4d3b673a679c098448aaad9e03edc8a4, type: 3}
     - target: {fileID: 4107623558672367355, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993392780499849729, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
