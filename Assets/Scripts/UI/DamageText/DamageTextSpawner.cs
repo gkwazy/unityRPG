@@ -8,16 +8,15 @@ namespace RPG.UI.DamageText
     {
         [SerializeField] DamageText damageTextPrefab = null;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            Spawn(11);
+        private void Start() {
+            //Spawn(11);
         }
 
        public void Spawn(float damageAmount)
        {
-           print("damage text");
+           
            DamageText instance = Instantiate<DamageText>(damageTextPrefab, transform);
+           instance.SetValue(damageAmount);
            
        }
     }
