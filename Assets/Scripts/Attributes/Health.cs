@@ -13,6 +13,8 @@ namespace RPG.Attributes
 
         [SerializeField] float regenerationPercentage = 70;
         [SerializeField] UnityEvent<float> takeDamage;
+        [SerializeField] UnityEvent onDie;
+
 
         SlowLoad<float> healthPoints;
 
@@ -72,6 +74,7 @@ namespace RPG.Attributes
             
             if (healthPoints.value == 0)
             {
+                onDie.Invoke();
               Die();
               if (!experianceRewarded)
               {
@@ -96,8 +99,12 @@ namespace RPG.Attributes
 
         public float getPercentage()
         {
-            Debug.Log($"{name}'s health before restore is { GetComponent<BaseStats>().GetStat(Stat.Health)}");
-            return (healthPoints.value / GetComponent<BaseStats>().GetStat(Stat.Health)) * 100;
+            return getFraction() * 100;
+        }
+
+        public float getFraction()
+        {
+            return (healthPoints.value / GetComponent<BaseStats>().GetStat(Stat.Health));
         }
 
         private void Die()

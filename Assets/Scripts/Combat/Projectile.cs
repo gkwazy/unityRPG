@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RPG.Attributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Projectile : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] float MaxLifeTime = 5f;
     [SerializeField] GameObject[] destroyOnHit = null;
     [SerializeField] float lifeAfterImpact = 0;
+    [SerializeField] UnityEvent onHit;
 
 
     Health target = null;
@@ -62,6 +64,8 @@ public class Projectile : MonoBehaviour
         }
 
         target.TakeDamage(instigator, damage);
+
+        onHit.Invoke();
 
         if(hitEffect != null)
         {
