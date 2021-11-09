@@ -35,12 +35,17 @@ namespace RPG.Attributes
     {
        healthPoints.Initialize();
     }
-    private void OnEnable() {
+    
+    private void OnEnable() 
+    {
         GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
     }
 
-    private void OnDisable() {
-     GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
+        
+
+    private void OnDisable() 
+    {
+        GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
     }
        
 
@@ -68,14 +73,13 @@ namespace RPG.Attributes
         
         public void TakeDamage(GameObject instigator, float damage)
         {
-
-            print(gameObject.name + " took damage: " + damage);
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
             
             if (healthPoints.value == 0)
             {
-                onDie.Invoke();
+              onDie.Invoke();
               Die();
+
               if (!experianceRewarded)
               {
                  AwardExperience(instigator);
@@ -127,10 +131,19 @@ namespace RPG.Attributes
             
         }
 
+        public void Heal(float healingPercent)
+        {
+            float truePercent = healingPercent/100;
+            float max = GetMaxHealthPoints();
+            print("amount healed "  + Mathf.Min(healthPoints.value + (max * truePercent), max));
+            print ("heal caled " + ((max * truePercent)));
+            healthPoints.value = Mathf.Min(healthPoints.value + (max * truePercent), max);
+        }
+
         private void RegenerateHealth()
         {
            float regenHealthPoints = (GetComponent<BaseStats>().GetStat(Stat.Health) * regenerationPercentage) /100; 
-           healthPoints.value = Mathf.Max(healthPoints.value, regenHealthPoints);
+           healthPoints.value = Mathf.Min(healthPoints.value, regenHealthPoints);
         }
     }
 }

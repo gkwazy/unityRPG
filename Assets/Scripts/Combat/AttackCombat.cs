@@ -7,6 +7,7 @@ using RPG.Attributes;
 using RPG.Stats;
 using System.Collections.Generic;
 using RPG.DeveloperTools;
+using UnityEngine.Events;
 
 namespace RPG.Combat
 {
@@ -17,6 +18,8 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] WeaponConfig defaultWeapon = null;
+        [SerializeField] Boolean canEquipWeapon;
+        [SerializeField] UnityEvent noWeaponAttackSound;
         
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
@@ -92,6 +95,7 @@ namespace RPG.Combat
 
         private void TriggerAttack()
         {
+
             GetComponent<Animator>().ResetTrigger("stopAttack");
             GetComponent<Animator>().SetTrigger("attack");
         }
@@ -144,6 +148,10 @@ namespace RPG.Combat
             if (currentWeapon.value != null)
             {
                currentWeapon.value.OnHit(); 
+            }
+            else
+            {
+                noWeaponAttackSound.Invoke();
             }
 
             if (currentWeaponConfig.HasProjectile())

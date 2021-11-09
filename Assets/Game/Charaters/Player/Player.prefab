@@ -60,6 +60,7 @@ MonoBehaviour:
   rightHandTransform: {fileID: 4909636756087304850}
   leftHandTransform: {fileID: 4909636756087304848}
   defaultWeapon: {fileID: 11400000, guid: 87cbfeac9cd213445aa6b19274d1ff38, type: 2}
+  canEquipWeapon: 1
 --- !u!114 &1359261985391455429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578802172420122375, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4578802172420122375, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_LocalPosition.y
