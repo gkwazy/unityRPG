@@ -58,11 +58,11 @@ PrefabInstance:
     - target: {fileID: 3059899961908164147, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: dc603c42b6599174e901596a1f756de4, type: 3}
+      objectReference: {fileID: 9000000, guid: 981abb089aed35b47ba9c72dde91f1f5, type: 3}
     - target: {fileID: 3059899961908164147, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d864c2d8a036d7246b870def79c91e50, type: 2}
+      objectReference: {fileID: 22100000, guid: beb973d82d9f0444085af2438c1f1b48, type: 2}
     - target: {fileID: 3112267404589119847, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: m_Name
       value: Skeleton Bow
