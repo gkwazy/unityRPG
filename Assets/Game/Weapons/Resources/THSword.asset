@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: THSword
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 22100000, guid: 6a702fd2692018540badaf073ebe12dc, type: 2}
-  equippedPrefab: {fileID: 9040583649260646085, guid: 5f9bb90b9e0d95a4d84212baad822678, type: 3}
+  equippedPrefab: {fileID: 4563659211981731881, guid: 5f9bb90b9e0d95a4d84212baad822678, type: 3}
   weaponDamage: 0
   percentageBonus: 5
   weaponRange: 2
