@@ -22,7 +22,7 @@ namespace RPG.Control
 
         [SerializeField] CursorMapping[] cursorMappings = null;
         [SerializeField] float maxNavmeshProjectionDistance = 3.0f;
-        [SerializeField] float maxNavPathLength = 40f;
+      
 
         private void Awake() 
         {
@@ -91,6 +91,8 @@ namespace RPG.Control
             bool hasHit = RaycastNavMesh(out hit);
             if (hasHit)
             {
+                if (!GetComponent<CharaterMovement>().CanMoveTo(hit)) return false;
+
                 if (Input.GetMouseButton(0))
                 {
                     GetComponent<CharaterMovement>().StartMoveAction(hit, 1f);
@@ -115,27 +117,11 @@ namespace RPG.Control
 
             target = navMeshHit.position;
 
-            NavMeshPath path = new NavMeshPath();
-            bool hasPath = NavMesh.CalculatePath(transform.position, target, NavMesh.AllAreas, path);
-            if (!hasPath) return false;
-            if (path.status != NavMeshPathStatus.PathComplete) return false;
-            if(GetPathLength(path) > maxNavPathLength) return false;
+
             
             return true;
         }
 
-        private float GetPathLength(NavMeshPath path)
-        {
-            float total = 0;
-            if (path.corners.Length < 2) return total;
-
-            for (int i = 0; i < path.corners.Length-1; i++)
-            {
-                total += Vector3.Distance(path.corners[i],path.corners[i+1]);
-            }
-
-            return total;
-        }
 
         private static Ray GetMouseRay()
         {

@@ -58,7 +58,14 @@ namespace RPG.Combat
         {
             if (Input.GetMouseButtonDown(0))
             {
-                PickUp(callingController.gameObject);
+                if ((Vector3.Distance(gameObject.transform.position, callingController.transform.position) < 2))
+                {
+                    PickUp(callingController.gameObject);
+                    return true;
+                }
+                else {
+                    return false;
+                }
             }
             return true;
         }
