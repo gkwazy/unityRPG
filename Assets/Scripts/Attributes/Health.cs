@@ -12,8 +12,10 @@ namespace RPG.Attributes
     {
 
         [SerializeField] float regenerationPercentage = 70;
+         [SerializeField] bool StartDead = false;
         [SerializeField] UnityEvent<float> takeDamage;
         [SerializeField] UnityEvent onDie;
+       
 
 
         SlowLoad<float> healthPoints;
@@ -23,7 +25,10 @@ namespace RPG.Attributes
 
     private void Awake() 
     {
-        healthPoints = new SlowLoad<float>(GetInitialHealth);    
+        healthPoints = new SlowLoad<float>(GetInitialHealth);
+        if (StartDead){
+            Die();
+        }    
     }
 
     private float GetInitialHealth()

@@ -61,6 +61,9 @@ MonoBehaviour:
   leftHandTransform: {fileID: 4909636756087304848}
   defaultWeapon: {fileID: 11400000, guid: 87cbfeac9cd213445aa6b19274d1ff38, type: 2}
   canEquipWeapon: 1
+  noWeaponAttackSound:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1359261985391455429
 MonoBehaviour:
   m_ObjectHideFlags: 0

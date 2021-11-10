@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
-  healingPercent: 10
+  healingPercent: 25
   respawnTime: 100
 --- !u!136 &-871851514993783732
 CapsuleCollider:
