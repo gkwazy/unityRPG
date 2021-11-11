@@ -15,9 +15,11 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 3f;
+        [SerializeField] float agroCoolDown = 3f;
         [SerializeField] float waypointDwellTime = 3f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
+        [SerializeField] float shoutDistance = 3f;
 
         [Range(0,1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
@@ -35,6 +37,7 @@ namespace RPG.Control
         SlowLoad<Vector3> guardPosition;
         float timeSincLastSawPlayer = Mathf.Infinity;
         float timeSincArrivedAtWaypoint = Mathf.Infinity;
+        float timeSincAggrevated = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
 
@@ -58,9 +61,8 @@ namespace RPG.Control
                 return;
             }
 
-            if (InAttackRangeOfPlayer() && attackCombat.CanAttack(player))
+            if (IsAggrevated() && attackCombat.CanAttack(player))
             {
-               
                 AttackBehavoir();
             }
             else if (timeSincLastSawPlayer < suspicionTime)
@@ -84,6 +86,7 @@ namespace RPG.Control
         {
             timeSincLastSawPlayer += Time.deltaTime;
             timeSincArrivedAtWaypoint += Time.deltaTime;
+            timeSincAggrevated += Time.deltaTime;
         }
 
         private void PatrolBehaviour()
@@ -136,12 +139,27 @@ namespace RPG.Control
             //navMeshAgent.speed = attackSpeed;
             timeSincLastSawPlayer = 0;
             attackCombat.Attack(player);
+            AggrevateNearbyEnemies();
+
         }
 
-        private bool InAttackRangeOfPlayer()
+        private bool IsAggrevated()
         {
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-            return ( distanceToPlayer < chaseDistance);
+            return ( distanceToPlayer < chaseDistance || timeSincAggrevated < agroCoolDown);
+        }
+
+        private void AggrevateNearbyEnemies()
+        {
+          RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0);
+          foreach (RaycastHit hit in hits)
+          {
+              AIController ai = hit.collider.GetComponent<AIController>();
+              if (ai == null) continue;
+
+              ai.Aggrevate();
+          }
+
         }
 
  //Called By unity for the programmer
@@ -149,6 +167,12 @@ namespace RPG.Control
         {
             Gizmos.color = Color.black;
             Gizmos.DrawWireSphere(transform.position, chaseDistance);
+        }
+
+        public void Aggrevate()
+       
+        {
+            timeSincAggrevated = 0;
         }
 
     }

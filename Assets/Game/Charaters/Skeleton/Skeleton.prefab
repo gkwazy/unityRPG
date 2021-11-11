@@ -28,6 +28,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 9
   suspicionTime: 5
+  agroCoolDown: 3
   waypointDwellTime: 3
   patrolPath: {fileID: 0}
   waypointTolerance: 1
@@ -355,6 +356,34 @@ PrefabInstance:
     - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: healthPoints
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 63882773324063280}
+    - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Control.AIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101886604477735649, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7925039835544314114, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_audioClip
