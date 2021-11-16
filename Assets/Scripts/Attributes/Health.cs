@@ -5,6 +5,8 @@ using RPG.Core;
 using System;
 using RPG.DeveloperTools;
 using UnityEngine.Events;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace RPG.Attributes
 {
@@ -12,7 +14,7 @@ namespace RPG.Attributes
     {
 
         [SerializeField] float regenerationPercentage = 70;
-         [SerializeField] bool StartDead = false;
+        [SerializeField] bool StartDead = false;
         [SerializeField] UnityEvent<float> takeDamage;
         [SerializeField] UnityEvent onDie;
        
@@ -118,12 +120,26 @@ namespace RPG.Attributes
 
         private void Die()
         {
-            if (isDead) return;
-
-            isDead = true;
-            GetComponent<Animator>().SetTrigger("die");
-            GetComponent<ActionScheduler>().CancelCurrentAction();
+            StartCoroutine(DieRoutine());
         }  
+
+        IEnumerator DieRoutine()
+        {
+            yield return 0;
+
+            if (isDead)
+            {
+                yield break;
+            }
+            else
+            {
+                isDead = true;
+                GetComponent<Animator>().SetTrigger("die");
+                GetComponent<ActionScheduler>().CancelCurrentAction();
+            }
+
+           
+        }
 
         private void AwardExperience(GameObject instigator)
         {
