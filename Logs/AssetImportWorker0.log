@@ -970,3 +970,25 @@ Received Import Request.
 Start importing Assets/Game/Core/Portal.prefab using Guid(f6856d324b79ce04dbc7a2b89bbf9cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a0b9acbc8bbd30b7c87006cec22f6d') in 0.003992 seconds
   Import took 0.006405 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000962 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.814 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1462 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 165.7 MB.
+System memory in use after: 165.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2102.
+Total: 1.771900 ms (FindLiveObjects: 0.151300 ms CreateObjectMapping: 0.034900 ms MarkObjects: 1.400300 ms  DeleteObjects: 0.184600 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
