@@ -42,7 +42,7 @@ namespace RPG.Combat
 
             if (target == null) return;
 
-            if (target.IsDead()) return;
+            if (target.Killed()) return;
 
             if (!GetIsInRange(target.transform))
             {
@@ -118,7 +118,7 @@ namespace RPG.Combat
             }
 
             Health targetToTest = attackTarget.GetComponent<Health>();
-            return(targetToTest != null && !targetToTest.IsDead());
+            return(targetToTest != null && !targetToTest.Killed());
         }
 
         public void Attack(GameObject combatTarget)
@@ -166,7 +166,7 @@ namespace RPG.Combat
             }
             else
             {
-                target.TakeDamage(gameObject, damage);
+                target.DamageHealth(gameObject, damage);
             }
         }
 

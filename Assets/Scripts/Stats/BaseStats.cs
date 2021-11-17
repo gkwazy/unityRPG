@@ -15,7 +15,7 @@ namespace RPG.Stats
         [SerializeField] GameObject levelUpParticals = null;
         [SerializeField] bool shouldUseModifiers = false;
 
-        public event Action onLevelUp;
+        public event Action lvlGain;
 
         SlowLoad<int> currentLevel;
         Experience experience;
@@ -53,7 +53,7 @@ namespace RPG.Stats
             {
                 currentLevel.value = newLevel;
                 LevelUpEffect();
-                onLevelUp();
+                lvlGain();
             }
 
         }

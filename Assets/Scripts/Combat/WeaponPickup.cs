@@ -31,7 +31,7 @@ namespace RPG.Combat
 
             if (healingPercent > 0)
             {
-                character.GetComponent<Health>().Heal(healingPercent);
+                character.GetComponent<Health>().restoreHealth(healingPercent);
             }
             
             StartCoroutine(HideForSeconds(respawnTime));

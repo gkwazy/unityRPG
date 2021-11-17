@@ -56,7 +56,7 @@ namespace RPG.Control
 
         private void Update()
         {
-            if (health.IsDead())
+            if (health.Killed())
             {
                 return;
             }

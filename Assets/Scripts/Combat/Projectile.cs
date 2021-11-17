@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         if (target == null)return;
-        if (isHoming && !target.IsDead())
+        if (isHoming && !target.Killed())
         {
             transform.LookAt(GetAimLocation());
         }
@@ -58,12 +58,12 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Health>() != target || target.IsDead() )
+        if (other.GetComponent<Health>() != target || target.Killed() )
         {
            return;
         }
 
-        target.TakeDamage(instigator, damage);
+        target.DamageHealth(instigator, damage);
 
         onHit.Invoke();
 
