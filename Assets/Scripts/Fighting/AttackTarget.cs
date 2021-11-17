@@ -1,20 +1,20 @@
 using UnityEngine;
-using RPG.Attributes;
+using RPG.HealthObject;
 using RPG.Control;
 
-namespace RPG.Combat
+namespace RPG.Fighting
 {
     [RequireComponent(typeof(Health))]
     public class AttackTarget : MonoBehaviour, IRaycastable
     {
-        public CursorType GetCursorType()
+        public CursorType GetShapeOfCursor()
         {
             return CursorType.Combat;
         }
 
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleSpherecast(HeroController callingController)
         {
-            if (!callingController.GetComponent<AttackCombat>().CanAttack(gameObject))
+            if (!callingController.GetComponent<AttackCombat>().AbleToFight(gameObject))
             {
                 return false;
             }

@@ -46,12 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8487fe44d9dbd4d9a1ff3183a327bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 1.5
-  rightHandTransform: {fileID: 5314121035457341464}
-  leftHandTransform: {fileID: 5305543120379530214}
-  defaultWeapon: {fileID: 11400000, guid: 2a6f7ecdb92f07a48a93e8a1d83df08b, type: 2}
-  canEquipWeapon: 0
-  noWeaponAttackSound:
+  rightItemTransform: {fileID: 0}
+  leftItemTransform: {fileID: 0}
+  defaultSwingTimer: 1
+  usingWeapons: 0
+  noWeaponSound:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1301438710993866833}
@@ -66,6 +65,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  startingWeapon: {fileID: 11400000, guid: 2a6f7ecdb92f07a48a93e8a1d83df08b, type: 2}
 --- !u!1 &3297033265744397850
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,13 +540,3 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 94d5d665d0a8c574597f451ca909d580, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf2cc118768d314988702254deb07a7, type: 3}
---- !u!4 &5305543120379530214 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4838593512478048, guid: ebf2cc118768d314988702254deb07a7, type: 3}
-  m_PrefabInstance: {fileID: 5309783506333425286}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5314121035457341464 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4414652245538462, guid: ebf2cc118768d314988702254deb07a7, type: 3}
-  m_PrefabInstance: {fileID: 5309783506333425286}
-  m_PrefabAsset: {fileID: 0}

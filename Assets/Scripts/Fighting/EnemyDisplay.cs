@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using RPG.Attributes;
+using RPG.HealthObject;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RPG.Combat
+namespace RPG.Fighting
 {
     public class EnemyDisplay : MonoBehaviour
     {

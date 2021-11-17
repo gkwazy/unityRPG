@@ -8,7 +8,7 @@ using UnityEngine.Events;
 using System.Collections.Generic;
 using System.Collections;
 
-namespace RPG.Attributes
+namespace RPG.HealthObject
 {
     public class Health : MonoBehaviour,ISaveable
     {
@@ -56,12 +56,12 @@ namespace RPG.Attributes
     }
        
 
-        public object CaptureState()
+        public object GetWeaponState()
         {
             return healthPoints.value;
         }
 
-        public void RestoreState(object state)
+        public void RestoreWeaponState(object state)
         {
             healthPoints.value = (float) state;
            

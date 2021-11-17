@@ -1,8 +1,8 @@
 using System;
-using RPG.Attributes;
+using RPG.HealthObject;
 using UnityEngine;
 
-namespace RPG.Combat
+namespace RPG.Fighting
 {
 
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make New Weapon", order = 0)]

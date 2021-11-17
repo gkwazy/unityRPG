@@ -10,7 +10,7 @@ namespace RPG.Stats
 
         public event Action onExperienceGained;
 
-        public object CaptureState()
+        public object GetWeaponState()
         {
            return experiencePoints;
         }
@@ -21,7 +21,7 @@ namespace RPG.Stats
             onExperienceGained();
         }
 
-        public void RestoreState(object state)
+        public void RestoreWeaponState(object state)
         {
             experiencePoints = (float)state;
         }

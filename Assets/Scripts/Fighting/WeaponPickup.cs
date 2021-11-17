@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using RPG.Attributes;
+using RPG.HealthObject;
 using RPG.Control;
 using UnityEngine;
 
 
-namespace RPG.Combat
+namespace RPG.Fighting
 {
     public class WeaponPickup : MonoBehaviour, IRaycastable
     {
@@ -54,7 +54,7 @@ namespace RPG.Combat
             }
         }
 
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleSpherecast(HeroController callingController)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -70,7 +70,7 @@ namespace RPG.Combat
             return true;
         }
 
-        public CursorType GetCursorType()
+        public CursorType GetShapeOfCursor()
         {
             return CursorType.Pickup;
         }

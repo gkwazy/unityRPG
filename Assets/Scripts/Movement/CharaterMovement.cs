@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
 using RPG.Saving;
-using RPG.Attributes;
+using RPG.HealthObject;
 
 namespace RPG.Movement
 {
@@ -85,12 +85,12 @@ namespace RPG.Movement
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
 
-        public object CaptureState()
+        public object GetWeaponState()
         {
             return new SerializableVector3(transform.position);
         }
 
-        public void RestoreState(object state)
+        public void RestoreWeaponState(object state)
         {
             SerializableVector3 position = (SerializableVector3)state;
             navMeshAgent.enabled = false;

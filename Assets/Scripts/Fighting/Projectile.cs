@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using RPG.Attributes;
+using RPG.HealthObject;
 using UnityEngine;
 using UnityEngine.Events;
 

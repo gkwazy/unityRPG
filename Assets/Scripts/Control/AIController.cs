@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RPG.Combat;
+using RPG.Fighting;
 using RPG.Core;
 using RPG.Movement;
 using UnityEngine.AI;
 using System;
-using RPG.Attributes;
+using RPG.HealthObject;
 using RPG.DeveloperTools;
 
 namespace RPG.Control
@@ -61,7 +61,7 @@ namespace RPG.Control
                 return;
             }
 
-            if (IsAggrevated() && attackCombat.CanAttack(player))
+            if (IsAggrevated() && attackCombat.AbleToFight(player))
             {
                 AttackBehavoir();
             }

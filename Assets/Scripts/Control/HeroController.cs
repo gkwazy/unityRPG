@@ -1,14 +1,14 @@
 using UnityEngine;
 using RPG.Movement;
-using RPG.Combat;
+using RPG.Fighting;
 using System;
-using RPG.Attributes;
+using RPG.HealthObject;
 using UnityEngine.EventSystems;
 using UnityEngine.AI;
 
 namespace RPG.Control
 {
-    public class PlayerController : MonoBehaviour
+    public class HeroController : MonoBehaviour
     {
         Health health;
 
@@ -52,9 +52,9 @@ namespace RPG.Control
                 IRaycastable [] raycastables = hit.transform.GetComponents<IRaycastable>();
                 foreach (IRaycastable raycastable in raycastables)
                 {
-                    if (raycastable.HandleRaycast(this))
+                    if (raycastable.HandleSpherecast(this))
                     {
-                        SetCursor(raycastable.GetCursorType());
+                        SetCursor(raycastable.GetShapeOfCursor());
                         return true;
                     }
                 }
