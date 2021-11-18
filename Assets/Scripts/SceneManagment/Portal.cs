@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using RPG.SceneManagement;
 using RPG.Saving;
-using RPG.Control;
+using RPG.Manager;
 
 namespace RPG.SceneMangement
 {
@@ -40,14 +40,14 @@ namespace RPG.SceneMangement
 
             Fader fader = FindObjectOfType<Fader>();
             SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
-            HeroController playerController = GameObject.FindWithTag("Player").GetComponent<HeroController>();
+            HeroManager playerController = GameObject.FindWithTag("Player").GetComponent<HeroManager>();
             playerController.enabled = false;
             yield return fader.FadeOut(fadeOutTime);
 
             savingWrapper.Save();
 
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
-            HeroController newPlayerController = GameObject.FindWithTag("Player").GetComponent<HeroController>();
+            HeroManager newPlayerController = GameObject.FindWithTag("Player").GetComponent<HeroManager>();
             newPlayerController.enabled = false;
 
             savingWrapper.Load();

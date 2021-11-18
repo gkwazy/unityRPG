@@ -6,16 +6,16 @@ using RPG.HealthObject;
 using UnityEngine.EventSystems;
 using UnityEngine.AI;
 
-namespace RPG.Control
+namespace RPG.Manager
 {
-    public class HeroController : MonoBehaviour
+    public class HeroManager : MonoBehaviour
     {
         Health health;
 
         [System.Serializable]
         struct CursorMapping
         {
-            public CursorType type;
+            public CursorShape shape;
             public Texture2D texture;
             public Vector2 hotspot;
         }
@@ -33,18 +33,18 @@ namespace RPG.Control
 
         void Update()
         {
-            if(InteractWithUI()) return;
+            if(ClickOnUI()) return;
             if(health.Killed()) 
             {
-                SetCursor(CursorType.None);
+                SetCursor(CursorShape.None);
                 return;
             }
-            if(InteractWithCompoment()) return;
-            if(InteractWithMovement()) return;
-            SetCursor(CursorType.None);
+            if(ClickOnEnemy()) return;
+            if(ClickOnMap()) return;
+            SetCursor(CursorShape.None);
         }
 
-        private bool InteractWithCompoment()
+        private bool ClickOnEnemy()
         {
             RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
             foreach (RaycastHit hit in hits)
@@ -75,17 +75,17 @@ namespace RPG.Control
             return hits;
         }
 
-        private bool InteractWithUI()
+        private bool ClickOnUI()
         {
            if (EventSystem.current.IsPointerOverGameObject())
            {
-               SetCursor(CursorType.UI);
+               SetCursor(CursorShape.UI);
                return true;
            }
            return false;
         }
 
-        private bool InteractWithMovement()
+        private bool ClickOnMap()
         {
            
             Vector3 hit;
@@ -98,7 +98,7 @@ namespace RPG.Control
                 {
                     GetComponent<CharaterMovement>().StartMoveAction(hit, 1f);
                 }
-                SetCursor(CursorType.Movement);
+                SetCursor(CursorShape.Movement);
                return true;
             }
             return false;
@@ -129,17 +129,17 @@ namespace RPG.Control
             return Camera.main.ScreenPointToRay(Input.mousePosition);
         }
 
-        private void SetCursor(CursorType type)
+        private void SetCursor(CursorShape type)
         {
             CursorMapping mapping = getCursorMapping(type);
             Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
         }
 
-        private CursorMapping getCursorMapping(CursorType cursorType)
+        private CursorMapping getCursorMapping(CursorShape cursorType)
         {
             foreach (CursorMapping map in cursorMappings)
             {
-                if (map.type == cursorType)
+                if (map.shape == cursorType)
                 {
                     return map;
                 }

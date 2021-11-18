@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using RPG.HealthObject;
-using RPG.Control;
+using RPG.Manager;
 using UnityEngine;
 
 
@@ -54,7 +54,7 @@ namespace RPG.Fighting
             }
         }
 
-        public bool HandleSpherecast(HeroController callingController)
+        public bool HandleSpherecast(HeroManager callingController)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -70,9 +70,9 @@ namespace RPG.Fighting
             return true;
         }
 
-        public CursorType GetShapeOfCursor()
+        public CursorShape GetShapeOfCursor()
         {
-            return CursorType.Pickup;
+            return CursorShape.Pickup;
         }
     }
 }

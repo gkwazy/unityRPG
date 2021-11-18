@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 8678113250582943123}
+    - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: patrolRoute
+      value: 
+      objectReference: {fileID: 8678113250582943123}
     - target: {fileID: 1250885762721693275, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: uniqueIdentifier
       value: 84b1aefa-3504-4341-8693-61235a39bbad
@@ -341,6 +345,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 613509382}
+    - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: patrolRoute
       value: 
       objectReference: {fileID: 613509382}
     - target: {fileID: 1250885762721693275, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
@@ -3891,7 +3899,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816802414}
-  m_LocalRotation: {x: 0.26086077, y: 0.7119354, z: -0.5620745, w: 0.33041176}
+  m_LocalRotation: {x: 0.2608607, y: 0.7119354, z: -0.56207454, w: 0.33041164}
   m_LocalPosition: {x: -28.442795, y: 5.29, z: 43.54676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5270,6 +5278,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1647175629}
     - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: patrolRoute
+      value: 
+      objectReference: {fileID: 681739589}
+    - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: chaseDistance
       value: 10
       objectReference: {fileID: 0}
@@ -6319,7 +6331,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191351831}
-  m_LocalRotation: {x: 0.22679631, y: -0.73816544, z: 0.29848537, w: 0.56087583}
+  m_LocalRotation: {x: 0.2267963, y: -0.73816544, z: 0.2984853, w: 0.56087583}
   m_LocalPosition: {x: -32.05, y: -2.52, z: 58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8251,7 +8263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477109399}
-  m_LocalRotation: {x: 0.4151496, y: 0.17695723, z: -0.08267926, w: 0.8885388}
+  m_LocalRotation: {x: 0.4150159, y: 0.17838752, z: -0.08334751, w: 0.88825274}
   m_LocalPosition: {x: -23.207376, y: -2.06, z: 26.347206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8791,6 +8803,10 @@ PrefabInstance:
       propertyPath: handTransform
       value: 
       objectReference: {fileID: 1022961511}
+    - target: {fileID: 1598133615019364568, guid: a36107b8cd056fc4f9dfdd9993a7eb07, type: 3}
+      propertyPath: startingWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b826352aa435a54f8f5f9655596a65f, type: 2}
     - target: {fileID: 1598133615019364568, guid: a36107b8cd056fc4f9dfdd9993a7eb07, type: 3}
       propertyPath: weaponOverride
       value: 
@@ -11305,6 +11321,10 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 681739589}
+    - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: patrolRoute
+      value: 
+      objectReference: {fileID: 1647175629}
     - target: {fileID: 1250885762721693275, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: uniqueIdentifier
       value: ceea3910-242c-4d17-a6ab-062b6fcbc5a2
@@ -11445,6 +11465,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 3052836102804816258}
+    - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: patrolRoute
       value: 
       objectReference: {fileID: 3052836102804816258}
     - target: {fileID: 1250885762721693275, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}

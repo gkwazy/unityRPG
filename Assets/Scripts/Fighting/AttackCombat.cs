@@ -108,6 +108,7 @@ namespace RPG.Fighting
 
         public bool AbleToFight(GameObject attackTarget)
         {
+            
             if (attackTarget == null)
             {
                 return false;
@@ -117,7 +118,6 @@ namespace RPG.Fighting
             {
                 return false;
             }
-
             Health wantedTarget = attackTarget.GetComponent<Health>();
             return(wantedTarget != null && !wantedTarget.Killed());
         }

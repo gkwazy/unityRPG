@@ -9,17 +9,17 @@ using System;
 using RPG.HealthObject;
 using RPG.DeveloperTools;
 
-namespace RPG.Control
+namespace RPG.Manager
 {
-    public class AIController : MonoBehaviour
+    public class AIManager : MonoBehaviour
     {
-        [SerializeField] float chaseDistance = 5f;
-        [SerializeField] float suspicionTime = 3f;
-        [SerializeField] float agroCoolDown = 3f;
+        [SerializeField] float pursuitDistance = 5f;
+        [SerializeField] float aggressionTime = 3f;
+        [SerializeField] float aggroCoolDown = 3f;
         [SerializeField] float waypointDwellTime = 3f;
-        [SerializeField] PatrolPath patrolPath;
-        [SerializeField] float waypointTolerance = 1f;
-        [SerializeField] float shoutDistance = 3f;
+        [SerializeField] PatrolRoute patrolRoute;
+        [SerializeField] float waypointTime = 1f;
+        [SerializeField] float allyAggro = 3f;
 
         [Range(0,1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
@@ -35,9 +35,9 @@ namespace RPG.Control
         NavMeshAgent navMeshAgent;
 
         SlowLoad<Vector3> guardPosition;
-        float timeSincLastSawPlayer = Mathf.Infinity;
-        float timeSincArrivedAtWaypoint = Mathf.Infinity;
-        float timeSincAggrevated = Mathf.Infinity;
+        float timePlayerSeen = Mathf.Infinity;
+        float timeAtWaypoint = Mathf.Infinity;
+        float timeAggrevated = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
 
@@ -47,7 +47,7 @@ namespace RPG.Control
             health = GetComponent<Health>();
             movement = GetComponent<CharaterMovement>();
             navMeshAgent = GetComponent<NavMeshAgent>();
-            guardPosition = new SlowLoad<Vector3>(GetGuardPosition);
+            guardPosition = new SlowLoad<Vector3>(GetEnemyPosition);
         }
 
         private void Start() {
@@ -60,49 +60,49 @@ namespace RPG.Control
             {
                 return;
             }
-
+            print(IsAggrevated());
             if (IsAggrevated() && attackCombat.AbleToFight(player))
             {
-                AttackBehavoir();
+                AttackMode();
             }
-            else if (timeSincLastSawPlayer < suspicionTime)
+            else if (timePlayerSeen < aggressionTime)
             {
                 SuspicionBehaviour();
             }
             else
             {
-                PatrolBehaviour();
+                PatrolMode();
             }
 
             UpdateTimers();
         }
 
-        private Vector3 GetGuardPosition()
+        private Vector3 GetEnemyPosition()
         {
             return transform.position;
         }
 
         private void UpdateTimers()
         {
-            timeSincLastSawPlayer += Time.deltaTime;
-            timeSincArrivedAtWaypoint += Time.deltaTime;
-            timeSincAggrevated += Time.deltaTime;
+            timePlayerSeen += Time.deltaTime;
+            timeAtWaypoint += Time.deltaTime;
+            timeAggrevated += Time.deltaTime;
         }
 
-        private void PatrolBehaviour()
+        private void PatrolMode()
         {
             // navMeshAgent.speed = patrolSpeed;
             Vector3 nextPosition = guardPosition.value;
-            if (patrolPath != null)
+            if (patrolRoute != null)
             {
                 if (AtWaypoint())
                 {
-                    timeSincArrivedAtWaypoint = 0f;
+                    timeAtWaypoint = 0f;
                     CycleWaypoint();
                 }
                 nextPosition = GetCurrentWaypoint();
             }
-            if ( timeSincArrivedAtWaypoint > waypointDwellTime)
+            if ( timeAtWaypoint > waypointDwellTime)
             {
                 movement.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
@@ -113,18 +113,18 @@ namespace RPG.Control
 //Methonds to help with enemy partoling 
         private Vector3 GetCurrentWaypoint()
         {
-            return patrolPath.GetWaypoint(currentWaypointIndex);
+            return patrolRoute.GetWaypoint(currentWaypointIndex);
         }
 
         private void CycleWaypoint()
         {
-            currentWaypointIndex = patrolPath.getNextWaypoint(currentWaypointIndex);
+            currentWaypointIndex = patrolRoute.getNextWaypoint(currentWaypointIndex);
         }
 
         private bool AtWaypoint()
         {
             float distanceToWaypoint = Vector3.Distance(transform.position, GetCurrentWaypoint());
-            return distanceToWaypoint < waypointTolerance;
+            return distanceToWaypoint < waypointTime;
         }
 
 // methonds to help have the enemy look for player for a short time or attack player
@@ -134,10 +134,10 @@ namespace RPG.Control
             GetComponent<ActionScheduler>().CancelCurrentAction();
         }
 
-        private void AttackBehavoir()
+        private void AttackMode()
         {
             //navMeshAgent.speed = attackSpeed;
-            timeSincLastSawPlayer = 0;
+            timePlayerSeen = 0;
             attackCombat.Attack(player);
             AggrevateNearbyEnemies();
 
@@ -146,15 +146,15 @@ namespace RPG.Control
         private bool IsAggrevated()
         {
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-            return ( distanceToPlayer < chaseDistance || timeSincAggrevated < agroCoolDown);
+            return ( distanceToPlayer < pursuitDistance || timeAggrevated < aggroCoolDown);
         }
 
         private void AggrevateNearbyEnemies()
         {
-          RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0);
+          RaycastHit[] hits = Physics.SphereCastAll(transform.position, allyAggro, Vector3.up, 0);
           foreach (RaycastHit hit in hits)
           {
-              AIController ai = hit.collider.GetComponent<AIController>();
+              AIManager ai = hit.collider.GetComponent<AIManager>();
               if (ai == null) continue;
 
               ai.Aggrevate();
@@ -166,13 +166,13 @@ namespace RPG.Control
         void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.black;
-            Gizmos.DrawWireSphere(transform.position, chaseDistance);
+            Gizmos.DrawWireSphere(transform.position, pursuitDistance);
         }
 
         public void Aggrevate()
        
         {
-            timeSincAggrevated = 0;
+            timeAggrevated = 0;
         }
 
     }
