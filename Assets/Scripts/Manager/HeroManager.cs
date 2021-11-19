@@ -92,7 +92,7 @@ namespace RPG.Manager
             bool hasHit = RaycastNavMesh(out hit);
             if (hasHit)
             {
-                if (!GetComponent<CharaterMovement>().CanMoveTo(hit)) return false;
+                if (!GetComponent<CharaterMovement>().AbleToMove(hit)) return false;
 
                 if (Input.GetMouseButton(0))
                 {

@@ -8,7 +8,7 @@ using RPG.HealthObject;
 
 namespace RPG.Movement
 {
-    public class CharaterMovement : MonoBehaviour, IAction, ISaveable
+    public class CharaterMovement : MonoBehaviour, IMode, ISaveable
     {
         [SerializeField] Transform target;
         [SerializeField] float maxSpeed = 5f;
@@ -33,16 +33,16 @@ namespace RPG.Movement
         void Update()
         {
             navMeshAgent.enabled = !health.Killed();
-            UpdateAnimator();
+            playAnimator();
         }
 
         public void StartMoveAction(Vector3 destination, float speedFraction)
         {
-            GetComponent<ActionScheduler>().StartAction(this);
-            MoveTo(destination, speedFraction);
+            GetComponent<ActionContoller>().StartAction(this);
+            Move(destination, speedFraction);
         }
 
-        public void MoveTo(Vector3 destination, float speedFraction)
+        public void Move(Vector3 destination, float speedFraction)
         {
             navMeshAgent.destination = destination;
             navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
@@ -54,17 +54,17 @@ namespace RPG.Movement
             navMeshAgent.isStopped = true;
         }
 
-        public bool CanMoveTo(Vector3 destination)
+        public bool AbleToMove(Vector3 destination)
         {
             NavMeshPath path = new NavMeshPath();
             bool hasPath = NavMesh.CalculatePath(transform.position, destination, NavMesh.AllAreas, path);
             if (!hasPath) return false;
             if (path.status != NavMeshPathStatus.PathComplete) return false;
-            if (GetPathLength(path) > maxNavPathLength) return false;
+            if (GetTravelDistance(path) > maxNavPathLength) return false;
             return true;
         }
 
-        private float GetPathLength(NavMeshPath path)
+        private float GetTravelDistance(NavMeshPath path)
         {
             float total = 0;
             if (path.corners.Length < 2) return total;
@@ -77,7 +77,7 @@ namespace RPG.Movement
             return total;
         }
 
-        private void UpdateAnimator()
+        private void playAnimator()
         {
             Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
@@ -96,7 +96,7 @@ namespace RPG.Movement
             navMeshAgent.enabled = false;
             transform.position = position.ToVector();
             navMeshAgent.enabled = true;
-            GetComponent<ActionScheduler>().CancelCurrentAction();
+            GetComponent<ActionContoller>().CancelCurrentAction();
         }
     }
 

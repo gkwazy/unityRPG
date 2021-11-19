@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RPG.Core
 {
-    public class CameraFacing : MonoBehaviour
+    public class ObjectCameraView : MonoBehaviour
     {
         void LateUpdate()
         {

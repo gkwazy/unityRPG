@@ -1,13 +1,13 @@
-using UnityEngine;
+ using UnityEngine;
 
 namespace RPG.Core
 {
 
-    public class ActionScheduler : MonoBehaviour 
+    public class ActionContoller : MonoBehaviour 
     {
-        IAction currentAction;
+        IMode currentAction;
 
-        public void StartAction(IAction action)
+        public void StartAction(IMode action)
         {
             if (currentAction == action) return;
 

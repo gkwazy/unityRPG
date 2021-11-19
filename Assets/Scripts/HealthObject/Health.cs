@@ -135,7 +135,7 @@ namespace RPG.HealthObject
             {
                 killed = true;
                 GetComponent<Animator>().SetTrigger("die");
-                GetComponent<ActionScheduler>().CancelCurrentAction();
+                GetComponent<ActionContoller>().CancelCurrentAction();
             }
 
            

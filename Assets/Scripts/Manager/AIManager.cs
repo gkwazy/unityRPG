@@ -131,7 +131,7 @@ namespace RPG.Manager
         private void SuspicionBehaviour()
         {
             // navMeshAgent.speed = attackSpeed;
-            GetComponent<ActionScheduler>().CancelCurrentAction();
+            GetComponent<ActionContoller>().CancelCurrentAction();
         }
 
         private void AttackMode()

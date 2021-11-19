@@ -10,10 +10,10 @@ namespace RPG.Saving
 {
 
     [ExecuteAlways]
-    public class SaveableEntity : MonoBehaviour
+    public class SaveableObject : MonoBehaviour
     {
-        [SerializeField] string uniqueIdentifier = "";
-        static Dictionary<string, SaveableEntity> globalLookup = new Dictionary<string, SaveableEntity>();
+        [SerializeField] string uniqueKey = "";
+        static Dictionary<string, SaveableObject> fileKeyDictionary = new Dictionary<string, SaveableObject>();
 
     #if UNITY_EDITOR
         void Update()
@@ -23,50 +23,50 @@ namespace RPG.Saving
             if (string.IsNullOrEmpty(gameObject.scene.path))return;
 
             SerializedObject serializedObject = new SerializedObject(this);
-            SerializedProperty property = serializedObject.FindProperty("uniqueIdentifier");
+            SerializedProperty property = serializedObject.FindProperty("uniqueKey");
 
             
-            if( string.IsNullOrEmpty(property.stringValue) || !IsUnique(property.stringValue))
+            if( string.IsNullOrEmpty(property.stringValue) || !IsKeyUsed(property.stringValue))
             {
                     property.stringValue = System.Guid.NewGuid().ToString();
                     serializedObject.ApplyModifiedProperties();
             }
 
-            globalLookup[property.stringValue] = this;
+            fileKeyDictionary[property.stringValue] = this;
         }
 
-        private bool IsUnique(string stringValue)
+        private bool IsKeyUsed(string keyValue)
         {
-            if (globalLookup.ContainsKey(stringValue))
+            if (fileKeyDictionary.ContainsKey(keyValue))
             {
                 return true;
             }
-            if (globalLookup[stringValue] == this)
+            if (fileKeyDictionary[keyValue] == this)
             {
-                return true;
-            }
-
-            if (globalLookup[stringValue] == null)
-            {
-                globalLookup.Remove(stringValue);
                 return true;
             }
 
-            if (globalLookup[stringValue].GetUniqueIdentifier() != stringValue)
+            if (fileKeyDictionary[keyValue] == null)
             {
-                globalLookup.Remove(stringValue);
+                fileKeyDictionary.Remove(keyValue);
+                return true;
+            }
+
+            if (fileKeyDictionary[keyValue].GetKey() != keyValue)
+            {
+                fileKeyDictionary.Remove(keyValue);
             }
 
             return false;
         }
 #endif
 
-        public string GetUniqueIdentifier()
+        public string GetKey()
         {
-            return uniqueIdentifier;
+            return uniqueKey;
         }
 
-        public object CaptureState()
+        public object SaveObjectInfo()
         {
             Dictionary<string, object> state = new Dictionary<string, object>();
             foreach(ISaveable saveable in GetComponents<ISaveable>())
@@ -76,15 +76,15 @@ namespace RPG.Saving
            return state;
         }
 
-        public void RestoreState(object state)
+        public void LoadObjectInfo(object info)
         {
-            Dictionary<string, object> stateDict = (Dictionary<string, object>) state;
+            Dictionary<string, object> infoDictionary = (Dictionary<string, object>) info;
             foreach(ISaveable saveable in GetComponents<ISaveable>())
             {
-                string typeString = saveable.GetType().ToString();
-                if (stateDict.ContainsKey(typeString))
+                string type = saveable.GetType().ToString();
+                if (infoDictionary.ContainsKey(type))
                 {
-                    saveable.RestoreWeaponState(stateDict[typeString]);
+                    saveable.RestoreWeaponState(infoDictionary[type]);
                 }
             }
         }

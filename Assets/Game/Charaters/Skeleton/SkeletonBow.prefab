@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: chaseDistance
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: pursuitDistance
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2855764805933129390, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -72,8 +76,34 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8477212866242694302, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: usingWeapons
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477212866242694302, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: defaultWeapon
       value: 
       objectReference: {fileID: 11400000, guid: 40b9ff38c23f92d4ab793f94207693f9, type: 2}
+    - target: {fileID: 8477212866242694302, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: startingWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 40b9ff38c23f92d4ab793f94207693f9, type: 2}
+    - target: {fileID: 8477212866242694302, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: leftItemTransform
+      value: 
+      objectReference: {fileID: 442182981722194410}
+    - target: {fileID: 8477212866242694302, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+      propertyPath: rightItemTransform
+      value: 
+      objectReference: {fileID: 449353508993802772}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+--- !u!4 &442182981722194410 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5305543120379530214, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+  m_PrefabInstance: {fileID: 5729669783435807244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &449353508993802772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5314121035457341464, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
+  m_PrefabInstance: {fileID: 5729669783435807244}
+  m_PrefabAsset: {fileID: 0}

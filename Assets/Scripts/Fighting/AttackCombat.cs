@@ -11,7 +11,7 @@ using UnityEngine.Events;
 
 namespace RPG.Fighting
 {
-    public class AttackCombat : MonoBehaviour, IAction, ISaveable, IModifierProvider {
+    public class AttackCombat : MonoBehaviour, IMode, ISaveable, IModifierProvider {
 
         
       
@@ -47,7 +47,7 @@ namespace RPG.Fighting
 
             if (!InRangeForAttack(target.transform))
             {
-                GetComponent<CharaterMovement>().MoveTo(target.transform.position, 1f);
+                GetComponent<CharaterMovement>().Move(target.transform.position, 1f);
             }
             else
             {
@@ -113,7 +113,7 @@ namespace RPG.Fighting
             {
                 return false;
             }
-            if (!GetComponent<CharaterMovement>().CanMoveTo(attackTarget.transform.position) &&
+            if (!GetComponent<CharaterMovement>().AbleToMove(attackTarget.transform.position) &&
                 !InRangeForAttack(attackTarget.transform)) 
             {
                 return false;
@@ -124,7 +124,7 @@ namespace RPG.Fighting
 
         public void Attack(GameObject combatTarget)
         {
-            GetComponent<ActionScheduler>().StartAction(this);
+            GetComponent<ActionContoller>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
 
         }
