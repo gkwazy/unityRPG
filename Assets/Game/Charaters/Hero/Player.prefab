@@ -108,6 +108,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536450997287358287, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
+      propertyPath: uniqueKey
+      value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536450997287358287, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: uniqueIdentifier
       value: player
       objectReference: {fileID: 0}
@@ -161,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 9000000, guid: dc603c42b6599174e901596a1f756de4, type: 3}
     - target: {fileID: 3404269714980636787, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_Name
-      value: Hero
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3404269714980636787, guid: 461f8afbec01c604c93ee959698ec198, type: 3}
       propertyPath: m_Layer

@@ -34,6 +34,7 @@ namespace RPG.Fighting
 
         private void Start() 
         {
+            
             equippedWeapon.Initialize();
         }
 
@@ -171,13 +172,14 @@ namespace RPG.Fighting
             }
         }
 
-        public object GetWeaponState()
+        public object GetState()
         {
             return equippedWeaponHandler.name;
         }
 
-        public void RestoreWeaponState(object state)
+        public void RestoreState(object state)
         {
+            print("loading waepon");
             string startingWeaponName = (string) state;
             WeaponConfig weapon = Resources.Load<WeaponConfig>(startingWeaponName);
             EquipWeapon(weapon);

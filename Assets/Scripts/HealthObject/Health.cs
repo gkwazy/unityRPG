@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace RPG.HealthObject
 {
-    public class Health : MonoBehaviour,ISaveable
+    public class Health : MonoBehaviour, ISaveable
     {
 
         [SerializeField] float regenerationPercentage = 70;
@@ -56,12 +56,12 @@ namespace RPG.HealthObject
     }
        
 
-        public object GetWeaponState()
+        public object GetState()
         {
             return healthPoints.value;
         }
 
-        public void RestoreWeaponState(object state)
+        public void RestoreState(object state)
         {
             healthPoints.value = (float) state;
            
@@ -157,7 +157,7 @@ namespace RPG.HealthObject
             float truePercent = healingPercent/100;
             float max = GetMaxHealth();
             print("amount healed "  + Mathf.Min(healthPoints.value + (max * truePercent), max));
-            print ("heal caled " + ((max * truePercent)));
+            print ("heal called " + ((max * truePercent)));
             healthPoints.value = Mathf.Min(healthPoints.value + (max * truePercent), max);
         }
 

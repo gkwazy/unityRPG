@@ -71,7 +71,7 @@ namespace RPG.Saving
             Dictionary<string, object> state = new Dictionary<string, object>();
             foreach(ISaveable saveable in GetComponents<ISaveable>())
             {
-               state[saveable.GetType().ToString()] = saveable.GetWeaponState(); 
+               state[saveable.GetType().ToString()] = saveable.GetState(); 
             }
            return state;
         }
@@ -84,7 +84,7 @@ namespace RPG.Saving
                 string type = saveable.GetType().ToString();
                 if (infoDictionary.ContainsKey(type))
                 {
-                    saveable.RestoreWeaponState(infoDictionary[type]);
+                    saveable.RestoreState(infoDictionary[type]);
                 }
             }
         }

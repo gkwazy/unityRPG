@@ -1,59 +1,48 @@
-using UnityEngine;
 using System.Collections;
-using System;
+using UnityEngine;
 
 namespace RPG.SceneManagement
 {
     public class Fader : MonoBehaviour
     {
         CanvasGroup canvasGroup;
-        Coroutine currentFade;
+        Coroutine currentFade = null;
 
-        private void Awake() {
+        private void Awake()
+        {
             canvasGroup = GetComponent<CanvasGroup>();
-        
         }
 
-        public void FadeOutImmediate()
+        public void FadeOutNow()
         {
             canvasGroup.alpha = 1;
         }
 
-        public IEnumerator FadeOut(float time)
+        public Coroutine FadeOut(float time)
         {
-           if (currentFade != null){
-               StopCoroutine(currentFade);
-           }
-           currentFade = StartCoroutine(FadeoutRoutine(time));
-           yield return currentFade;
+            return Fade(1, time);
         }
 
-        private IEnumerator FadeoutRoutine(float time)
+        public Coroutine FadeIn(float time)
         {
-            while(canvasGroup.alpha < 1)
-            {
-                canvasGroup.alpha += Time.deltaTime / time;
-                yield return null;
-            }
+            return Fade(0, time);
         }
 
-        public IEnumerator FadeIn(float time)
+        public Coroutine Fade(float target, float time)
         {
             if (currentFade != null)
             {
                 StopCoroutine(currentFade);
             }
-            currentFade = StartCoroutine(FadeInRoutine(time));
-            yield return currentFade;
-
-
+            currentFade = StartCoroutine(FadeRoutine(target, time));
+            return currentFade;
         }
 
-        private IEnumerator FadeInRoutine(float time)
+        private IEnumerator FadeRoutine(float target, float time)
         {
-            while (canvasGroup.alpha > 0)
+            while (!Mathf.Approximately(canvasGroup.alpha, target))
             {
-                canvasGroup.alpha -= Time.deltaTime / time;
+                canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.unscaledDeltaTime / time);
                 yield return null;
             }
         }

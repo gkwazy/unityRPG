@@ -85,12 +85,12 @@ namespace RPG.Movement
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
 
-        public object GetWeaponState()
+        public object GetState()
         {
             return new SerializableVector3(transform.position);
         }
 
-        public void RestoreWeaponState(object state)
+        public void RestoreState(object state)
         {
             SerializableVector3 position = (SerializableVector3)state;
             navMeshAgent.enabled = false;
