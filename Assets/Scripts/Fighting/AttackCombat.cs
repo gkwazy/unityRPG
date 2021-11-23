@@ -179,8 +179,10 @@ namespace RPG.Fighting
 
         public void RestoreState(object state)
         {
-            print("loading waepon");
+            print("loading weapon");
             string startingWeaponName = (string) state;
+           
+             print(startingWeaponName);
             WeaponConfig weapon = Resources.Load<WeaponConfig>(startingWeaponName);
             EquipWeapon(weapon);
         }

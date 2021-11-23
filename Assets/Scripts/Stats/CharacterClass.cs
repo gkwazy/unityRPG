@@ -5,6 +5,11 @@ namespace RPG.Stats
         Player,
         Skeleton,
         SkeletonArcher,
-        SkeletonCaptain
+        SkeletonCaptain,
+        Dragon,
+        Orc,
+        StoneGolem,
+        Spider
+        
     }
 }

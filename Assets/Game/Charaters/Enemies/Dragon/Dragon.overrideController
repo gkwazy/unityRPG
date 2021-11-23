@@ -7,5 +7,15 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dragon
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: d864c2d8a036d7246b870def79c91e50, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 177c82343fd110841b94bb854211415b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5a1c9eba74c6fb14d955b5c8f12eb9b9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b80eeb877a644004b9a1aab03292eacd, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 7a1757c32fec69643811291ee8094352, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 52948d592632ef940955a84f1816f035, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 26ddf4a492fb358499bb2e3b1a66a237, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 3502e15a7de777f46bfb7546a6f25f3d, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 26ddf4a492fb358499bb2e3b1a66a237, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: a47e9a94fb76afb4ea9b8c301cd7bca9, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: ae5597ea8ae8b7d48baaf44559537bd0, type: 3}
