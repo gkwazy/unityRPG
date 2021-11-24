@@ -96,7 +96,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 63882773324063280, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: pursuitDistance
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2855764805933129390, guid: a5cec0e990bacb444adfc035e3cf3e4b, type: 3}
       propertyPath: m_RootOrder

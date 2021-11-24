@@ -137,7 +137,7 @@ namespace RPG.Stats
                     return i;
                 }
             }
-            return maxLevel + 1;
+            return maxLevel;
         }
 
     }

@@ -9,7 +9,9 @@ namespace RPG.Stats
         Dragon,
         Orc,
         StoneGolem,
-        Spider
+        Spider, 
+        BigBoss
+        
         
     }
 }

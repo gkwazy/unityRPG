@@ -44,6 +44,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5642690617717486255}
     m_Modifications:
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: respawnTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: healingPercent
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8253345997575469309, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -106,6 +114,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5642690617717486255}
     m_Modifications:
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: respawnTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: healingPercent
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8253345997575469309, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -168,6 +184,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5642690617717486255}
     m_Modifications:
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: respawnTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: healingPercent
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8253345997575469309, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -230,6 +254,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5642690617717486255}
     m_Modifications:
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: respawnTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: healingPercent
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8253345997575469309, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -292,6 +324,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5642690617717486255}
     m_Modifications:
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: respawnTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: healingPercent
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8253345997575469309, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -354,6 +394,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5642690617717486255}
     m_Modifications:
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: respawnTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: healingPercent
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8253345997575469309, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -416,6 +464,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5642690617717486255}
     m_Modifications:
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: respawnTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7937288820960987511, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
+      propertyPath: healingPercent
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8253345997575469309, guid: c4b12c85ae8f38d4fbc391c469b8ccbb, type: 3}
       propertyPath: m_RootOrder
       value: 3

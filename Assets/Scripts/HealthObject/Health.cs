@@ -163,8 +163,10 @@ namespace RPG.HealthObject
 
         private void RegenerateHealth()
         {
-           float regenHealthPoints = (GetComponent<BaseStats>().GetStat(Stat.Health) * regenerationPercentage) /100; 
-           healthPoints.value = Mathf.Min(healthPoints.value, regenHealthPoints);
+            
+           float regenHealthPoints = (GetComponent<BaseStats>().GetStat(Stat.Health) * regenerationPercentage) /100;
+            print("here is health" +  regenHealthPoints);
+           healthPoints.value = Mathf.Max(healthPoints.value, regenHealthPoints);
         }
     }
 }
